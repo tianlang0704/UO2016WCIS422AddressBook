@@ -1,0 +1,5 @@
+Programmer - Zhang, Backup: Micah
+Manager - Trace, Backup: Max
+Technical Writing - Andrew, Backup: Trace
+Testing - Max, Backup: Zhang
+Architecture - Micah, Backup: Andrew
