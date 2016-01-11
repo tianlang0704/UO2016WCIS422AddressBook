@@ -9,6 +9,9 @@ pro:
 con:
 	Native C++ code requires more coding = more time
 	UI only runs on Windows, core function can be developed and used on other platforms
-
-Work in progress
-	-Still need to make Add window
+	
+Commnets
+	Buttons, control backgrounds, are placeholders and can be changed to other pictures as long as they are png or jpg or bmp.
+	Font styles, sizes, styling layout can be changed very easily.
+	Please suggest new pictures or even a set of pictures to put on.
+	
