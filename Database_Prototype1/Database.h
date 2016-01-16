@@ -17,10 +17,11 @@ public:
 	int GetAllRecords(const string tableName, vector<map <string,string> >* pEntryList) const;
 	int AddField(const string tableName, const string fieldName);
 	int AddRecord(const string tableName, const  map<string, string> newEntry);
-	int UpdateRecordByID(const string tableName, const pair<string, string> field);
-	int DeleteRecordByID(const string tableName, const string ID);
-	const map<string, string> GetRecordByID(const string tableName, const string ID) const;
+	int UpdateRecordByID(const string tableName, const string id, const pair<string, string> field);
+	int DeleteRecordByID(const string tableName, const string id);
+	int GetRecordByID(const string tableName, const string id, map<string, string>* out) const;
 	int AddTable(const string tableName);
+	int AddTable(const string tableName, const vector<string> defaultCols);
 	int DeleteTable(const string tableName);
 	bool IsTableExist(const string tableName) const;
 

@@ -28,67 +28,124 @@ int Database::GetAllRecords(const string tableName, vector< map<string, string> 
 	return Exec(sql, pEntryList);
 }
 
-//int Database::AddField(const string tableName, const string fieldName)
-//{
-//
-//}
+int Database::AddField(const string tableName, const string fieldName)
+{
+	string sql = "ALTER TABLE " + tableName + "\nADD " + fieldName + " TEXT";
+
+	return Exec(sql);
+}
 
 int Database::AddRecord(const string tableName, const map<string, string> newEntry)
 {
-	string sql = "INSERT INTO " + tableName + " (FIRSTNAME,LASTNAME,ADDRESS,ZIPCODE,PHONENUMBER) "\
-		"VALUES ('" + newEntry.at("FIRSTNAME").c_str() + "', '" + 
-		newEntry.at("LASTNAME").c_str() + "', '" + 
-		newEntry.at("ADDRESS").c_str() + "', '" + 
-		newEntry.at("ZIPCODE").c_str() + "', '" + 
-		newEntry.at("PHONENUMBER").c_str() + "' ); ";
+	string sql = "INSERT INTO " + tableName + " (";
+	
+	auto it = newEntry.cbegin();
+	while(it != newEntry.cend())
+	{
+		sql.append((*it).first);
+
+		++it;
+		if (it != newEntry.cend())
+			sql.append(",");
+		else
+			sql.append(") ");
+	}
+
+	sql.append("VALUES(");
+	it = newEntry.cbegin();
+	while (it != newEntry.cend())
+	{
+		sql.append("'" + (*it).second + "'");
+
+		++it;
+		if (it != newEntry.cend())
+			sql.append(",");
+		else
+			sql.append(");");
+	}
 
 	return Exec(sql);
 }
 
-//int Database::UpdateRecordByID(const string tableName, const pair<string, string> field)
-//{
-//
-//
-//
-//
-//}
-//
-//int Database::DeleteRecordByID(const string tableName, const string ID)
-//{
-//
-//
-//}
-//
-//const Entry Database::GetRecordByID(const string tableName, const string ID) const
-//{
-//
-//
-//}
-//
+int Database::UpdateRecordByID(const string tableName, const string id, const pair<string, string> field)
+{
+	string sql = "UPDATE " + tableName + " SET " + field.first + "='" + field.second + "' WHERE  ID=" + id + ";";
+
+	return Exec(sql);
+}
+
+
+int Database::DeleteRecordByID(const string tableName, const string id)
+{
+	string sql = "DELETE FROM " + tableName + " WHERE  ID=" + id + ";";
+
+	return Exec(sql);
+
+}
+
+int  Database::GetRecordByID(const string tableName, const string id, map<string, string>* out) const
+{
+	vector< map<string, string > > entryList;
+	int res;
+	
+	string sql = "SELECT * FROM " + tableName + " WHERE  ID=" + id + ";";
+	
+	res = Exec(sql, &entryList);
+
+	if (!res)
+	{
+		if (!entryList.empty())
+		{
+			(*out) = entryList[0];
+			return 0;
+		}
+		else
+			return 1;
+	}
+	else
+		return 2;
+}
+
+
 int Database::AddTable(const string tableName)
 {
-	string sql = "CREATE TABLE IF NOT EXISTS " + tableName + "(\
-		ID INTEGER PRIMARY KEY AUTOINCREMENT,\
-		FIRSTNAME TEXT NOT NULL,\
-		LASTNAME TEXT NOT NULL,\
-		ADDRESS TEXT NOT NULL,\
-		ZIPCODE TEXT NOT NULL,\
-		PHONENUMBER TEXT);";
-	
+	return AddTable(tableName, vector<string>());
+}
+
+int Database::AddTable(const string tableName, const vector<string> defaultCals)
+{
+	string sql;
+
+	if (defaultCals.empty())
+		sql = "CREATE TABLE IF NOT EXISTS " + tableName + "(ID INTEGER PRIMARY KEY AUTOINCREMENT);";
+	else
+	{
+		sql = "CREATE TABLE IF NOT EXISTS " + tableName + "(ID INTEGER PRIMARY KEY AUTOINCREMENT";
+		for (auto& i : defaultCals)
+			sql.append("," + i + " TEXT");
+		sql.append(");");
+	}
+
 	return Exec(sql);
 }
 
-//int Database::DeleteTable(const string tableName)
-//{
-//
-//
-//}
-//
-//bool Database::IsTableExist(const string tableName) const
-//{
-//
-//
-//}
+int Database::DeleteTable(const string tableName)
+{
+	string sql = "DROP TABLE IF EXISTS " + tableName;
+
+	return Exec(sql);
+}
+
+bool Database::IsTableExist(const string tableName) const
+{
+	vector< map<string, string> > entryList;
+	
+	string sql = "SELECT count(*) FROM sqlite_master WHERE type='table' AND name='" + tableName + "';";
+
+	Exec(sql, &entryList);
+
+	return entryList[0].at("count(*)") == "1";
+}
 
 int Database::Exec(const string sql, vector<map <string, string> >* pEntryList) const
 {
@@ -116,8 +173,10 @@ int Database::Exec(const string sql, vector<map <string, string> >* pEntryList) 
 					entry.insert(pair<string, string>(sqlite3_column_name(stmt, i), (char *)sqlite3_column_text(stmt, i)));
 				else if (sqlite3_column_type(stmt, i) == SQLITE_INTEGER)
 					entry.insert(pair<string, string>(sqlite3_column_name(stmt, i), to_string(sqlite3_column_int(stmt, i))));
+				else if (sqlite3_column_type(stmt, i) == SQLITE_NULL)
+					entry.insert(pair<string, string>(sqlite3_column_name(stmt, i), ""));
 				else
-					cout << "Field value type not recognized: " << sqlite3_column_type(stmt, i) << endl;
+					cout << "Field type not recognized: " << sqlite3_column_type(stmt, i) << endl;
 			}
 
 			if(pEntryList != NULL)
