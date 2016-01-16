@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window size="550,400" sizebox="4,4,8,8" caption="0,0,0,40" roundcorner="5, 5">
+	<Font id="0" name="Arial" size="18" bold="true" />
+	<Font id="1" name="Arial" size="12" bold="true" />
+	<Font id="2" name="helvetica" size="12" bold="true" />
+	<Include source="scrollbar.xml" />
+	<VerticalLayout bkimage="file='bg.png' corner='10,100,10,10' hole='false'" bkcolor="#FF313C00">
+		<Container float="true" height="50" width="50" inset="1,5,0,0"><Text text="ICON" font="0"/></Container>
+		<HorizontalLayout height="30" padding="0,0,0,8">	<!--Title-->
+			<HorizontalLayout inset="50,8,0,0">	<!--Title Bar -->
+				<Label height="22" text="TITLE TITLE TITLE" font="1" />
+			</HorizontalLayout>
+			<HorizontalLayout width="56" inset="0,2,2,0">	<!--Title Buttons -->
+				<Button name="w_min" maxwidth="28" maxheight="17" normalimage="file='max_min.png' source='0,0,28,17'" hotimage="file='max_min_h.png' source='0,0,28,17'" pushedimage="file='max_min_h.png' source='0,0,28,17'"/>
+				<Button name="w_close" maxwidth="28" maxheight="17" normalimage="file='max_min.png' source='28,0,56,17'" hotimage="file='max_min_h.png' source='28,0,56,17'" pushedimage="file='max_min_h.png' source='28,0,56,17'"/>
+			</HorizontalLayout>
+		</HorizontalLayout>
+		<HorizontalLayout height="32" inset="3,3,3,4"> 
+			<HorizontalLayout inset="5,0,20,0" padding="0,0,20,0" width="130"> <!-- Dropdown Sort -->
+				<Combo height="23" bkimage="file='combo_bg.png'" hotimage="file='combo_hot.png'" pushedimage="file='combo_pushed.png'">
+					<ListLabelElement text=" Sort By Dropdown" font="1" selected="true" />
+					<ListLabelElement text=" By Name" />
+				</Combo>
+			</HorizontalLayout>
+			<HorizontalLayout padding="0,0,3,0" inset="0,0,7,0"> <!-- Search Bar -->
+				<Edit name="search_text" height="23" text="Input name to search" bordercolor="#C6CFD8"  textcolor="#FFAA2244" bkimage="file='search_bg.png' source='0,0,258,23' corner='1,1,1,1'"/>
+				<Button padding="7,0,0,0" name="search_btn" text="Search" font="1" width="63" height="23" normalimage="file='button.png' source='0,0,63,23'" hotimage="file='button.png' source='0,23,63,46'" pushedimage="file='button.png' source='0,23,63,46'"/>
+			</HorizontalLayout>
+		</HorizontalLayout>
+		<HorizontalLayout inset="3,0,3,0">  <!-- Body -->
+			<VerticalLayout width="150" bkcolor="#FFFFFFFF"> <!--Name List-->
+				<List name="address_list"  inset="0,0,0,0" itemshowhtml="true" vscrollbar="true" hscrollbar="true" itemalign="center" itembkcolor="#FFE2DDDF" itemaltbk="true" menu="true" header="hidden">
+					<ListContainerElement inset="3,0,0,0" height="23"> <Label text="David Mini" /> </ListContainerElement>
+					<ListContainerElement inset="3,0,0,0" height="23"> <Label text="Who is this" /> </ListContainerElement>
+					<ListContainerElement inset="3,0,0,0" height="23"> <Label text="Eh. Typed wrong" /> </ListContainerElement>
+				</List>
+				<Container height="1" bkcolor="#FFDDDDDF" />
+				<HorizontalLayout padding="0,3,0,3" height="24">
+					<Button name="add_btn" text="Add" font="1" width="53" height="23" padding="6,0,10,0" normalimage="file='button.png' source='0,0,63,23'" hotimage="file='button.png' source='0,23,63,46'" pushedimage="file='button.png' source='0,23,63,46'"/>
+					<Button name="remove_btn" text="Remove" font="1" width="53" height="23" padding="10,0,6,0" normalimage="file='button.png' source='0,0,63,23'" hotimage="file='button.png' source='0,23,63,46'" pushedimage="file='button.png' source='0,23,63,46'"/>
+				</HorizontalLayout>
+			</VerticalLayout>
+			<Container width="1" bkcolor="#FFCECEDF"/>
+			<VerticalLayout> <!--Detailed Area-->
+				 <VerticalLayout padding="12,12,12,0" inset="10,10,10,10" bkcolor="#FFFFFFFF" borderround="10,10" bordersize="1" bordercolor="#FFDDDDDD" focusbordercolor="#FF883344">
+					<VerticalLayout>
+						<Label height="25"text="First Name:" font="2" textcolor="#FF222288" /> 
+						<Edit bkcolor="#FF663344" bkimage="file='search_bg.png' source='0,0,258,23' corner='1,1,1,1'" />
+						<Label height="25"text="Last Name:" font="2" textcolor="#FF222288" /> 
+						<Edit bkcolor="#FF663344" bkimage="file='search_bg.png' source='0,0,258,23' corner='1,1,1,1'" />
+						<Label height="25"text="Address:" font="2" textcolor="#FF222288" /> 
+						<Edit bkcolor="#FF663344" bkimage="file='search_bg.png' source='0,0,258,23' corner='1,1,1,1'" />
+					</VerticalLayout>
+					<HorizontalLayout height="25">
+						<Container />
+						<Button text="Apply" font="1" width="55" height="25" normalimage="file='button.png' source='0,0,63,23'" hotimage="file='button.png' source='0,23,63,46'" pushedimage="file='button.png' source='0,23,63,46'"/>
+					</HorizontalLayout>
+				 </VerticalLayout>
+			</VerticalLayout>
+		</HorizontalLayout>
+		<HorizontalLayout inset="3,0,3,3" height="25"> <!-- Footer -->
+			<HorizontalLayout bkimage="file='footer_bg.png'">
+			</HorizontalLayout>
+		</HorizontalLayout>
+	</VerticalLayout>
+</Window>

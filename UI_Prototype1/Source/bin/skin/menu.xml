@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window bktrans="true" size="120,82">
+ <Font id="0" name="Arial" size="13" bold="false"/>
+ <Font id="1" name="Arial" size="12"/>
+<VerticalLayout bkimage="file='menu_bk.png' corner='40,8,8,8'" hole="false">
+	<List header="hidden" inset="8,8,8,8" itemhotimage="file='menu_hot_bk.png' corner='2,2,2,2'" itemdisabledbkcolor="#FF999999">
+		<ListContainerElement name="menu_Open" height="22" inset="40,0,0,0">
+			<Label text="Add" mouse="false"/>
+		</ListContainerElement>
+		<ListContainerElement name="menu_Mark" height="22" inset="40,0,0,0">
+			<Label text="Edit" mouse="false"/>
+		</ListContainerElement>
+		<ListContainerElement name="menu_Delete" height="22" inset="40,0,0,0">
+			<Label text="Delete" mouse="false"/>
+		</ListContainerElement>
+	</List>
+</VerticalLayout>
+</Window>
