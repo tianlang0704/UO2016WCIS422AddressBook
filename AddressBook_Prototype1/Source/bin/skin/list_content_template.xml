@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template>
+<ListContainerElement name="list_content_template" inset="3,0,0,0" height="55">
+	<HorizontalLayout inset="0,2,0,0">
+		<Control name="list_content_pic" width="50" height="50" bkimage="file='photo_place_holder.png'"/>
+		<Container width="10" />
+		<VerticalLayout>
+			<Label name="list_content_name" text="" /> 
+			<Label name="list_content_phone" text="" />
+		</VerticalLayout>
+	</HorizontalLayout>
+</ListContainerElement>
+</template>

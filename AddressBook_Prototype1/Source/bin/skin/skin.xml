@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window size="650,500" sizebox="4,4,8,8" caption="0,0,0,40" roundcorner="5, 5" title="123" mininfo="300,300">
+	<Font id="0" name="Arial" size="18" bold="true" />
+	<Font id="1" name="Arial" size="12" bold="true" />
+	<Font id="2" name="helvetica" size="14" bold="true" />
+	<Font id="3" name="helvetica" size="22" bold="true" />
+	<Include source="scrollbar.xml" />
+	<Default shared="true" name="Button" value="normalimage=&quot;file='button.png' source='0,0,63,23'&quot; hotimage=&quot;file='button.png' source='0,23,63,46'&quot; pushedimage=&quot;file='button.png' source='0,23,63,46'&quot;" />
+	<VerticalLayout bkimage="file='bg.png' corner='10,100,10,10' hole='false'" bkcolor="#FF313C00">
+		<HorizontalLayout height="25" padding="0,0,5,0">	<!--Title-->
+			<Container float="true" height="50" width="50" inset="1,3,0,0"><Text text="ICON" font="0"/></Container>
+			<HorizontalLayout inset="50,5,0,0">	<!--Title Bar -->
+				<Label height="22" text="Duck Duck Goose Contact Manager" font="1" />
+			</HorizontalLayout>
+			<HorizontalLayout width="56" inset="0,2,2,0">	<!--Title Buttons -->
+				<Button name="w_min" maxwidth="28" maxheight="17" normalimage="file='max_min.png' source='0,0,28,17'" hotimage="file='max_min_h.png' source='0,0,28,17'" pushedimage="file='max_min_h.png' source='0,0,28,17'"/>
+				<Button name="w_close" maxwidth="28" maxheight="17" normalimage="file='max_min.png' source='28,0,56,17'" hotimage="file='max_min_h.png' source='28,0,56,17'" pushedimage="file='max_min_h.png' source='28,0,56,17'"/>
+			</HorizontalLayout>
+		</HorizontalLayout>
+		<HorizontalLayout height="25" inset="3,0,3,0"> <!-- Menu bar -->
+			<HorizontalLayout bkimage="file='menu_bar_bg.png'" inset="5,0,5,0">
+				<button name="btn_file" text="File" height="22" width="40" normalimage="" hotimage="menu_hot_bk.png" pushedimage="" />
+				<button name="btn_edit" text="Edit" height="22" width="40" normalimage="" hotimage="menu_hot_bk.png" pushedimage="" />
+				<button name="btn_view" text="View" height="22" width="40" normalimage="" hotimage="menu_hot_bk.png" pushedimage="" />
+				<button name="btn_help" text="Help" height="22" width="40" normalimage="" hotimage="menu_hot_bk.png" pushedimage="" />
+			</HorizontalLayout>
+		</HorizontalLayout>
+		<Container height="8" />
+		<HorizontalLayout name="tab_bar" height="20" inset="15,0,3,0"> <!-- Tab bar -->
+		  <Option name="tab_template" maxwidth="80" text="AD1" endellipsis="true" normalimage="tabbar_normal.png" hotimage="tabbar_hover.png" pushedimage="tabbar_pushed.png" selectedimage="tabbar_pushed.png" group="contenttab"/>
+		  <Button name="tab_new" maxwidth="20" inset="1,0,1,0" text="+" endellipsis="true" normalimage="tabbar_normal.png" hotimage="tabbar_hover.png" pushedimage="tabbar_pushed.png" selectedimage="tabbar_pushed.png" />
+		  <Control />
+		</HorizontalLayout>
+		<HorizontalLayout inset="3,0,3,3"><VerticalLayout bkcolor="#FFFBFBFB">
+			<Container bkcolor="#FFDDDDDD" height="1" />
+			<HorizontalLayout height="35" inset="3,5,3,4"> <!-- Tool bar -->
+				<Button name="tool_btn_save" text="Save" height="25" width="50" padding="3,0,3,0"/>
+				<Button name="tool_btn_add"text="Add Contact" height="25" width="80" padding="3,0,3,0"/>
+				<Button name="tool_btn_export"text="Export" height="25" width="50" padding="3,0,3,0"/>
+				<Button name="tool_btn_import"text="Import" height="25" width="50" padding="3,0,3,0"/>
+				<Container />
+				<Edit name="search_text" height="25" text="Input name to search" bordercolor="#C6CFD8"  textcolor="#FF4422AA" bkimage="file='search_bg.png' source='0,0,258,23' corner='1,1,1,1'"/>
+				<Button name="tool_btn_close" text="X" height="25" width="30" padding="3,0,3,0"/>
+			</HorizontalLayout>
+			<Container bkcolor="#FFDDDDDD" height="1" />
+			<TabLayout name="tab_content_container"> <!-- Tab contents -->
+				<HorizontalLayout name="tab_content_template" inset="3,0,3,0">  <!-- Tab body -->
+					<VerticalLayout width="200" bkcolor="#FFFFFFFF"> <!--Name List-->
+						<List name="contact_list"   inset="0,0,0,0" itemshowhtml="true" vscrollbar="true" hscrollbar="true" itemalign="center" itembkcolor="#FFE2DDDF" itemaltbk="true" menu="true" header="hidden">
+							<ListContainerElement name="list_content_template" inset="3,0,0,0" height="55">
+								<HorizontalLayout inset="0,2,0,0">
+									<Control name="pic" width="50" height="50" bkimage="file='photo_place_holder.png'"/>
+									<Container width="10" />
+									<VerticalLayout>
+										<Label name="name" text="Hoban Washburn" /> 
+										<Label name="phone" text="(867)555-8080 Ext. 2" />
+									</VerticalLayout>
+								</HorizontalLayout>
+							</ListContainerElement>
+						</List>
+					</VerticalLayout>
+					<Container width="1" bkcolor="#FFCECEDF"/>
+					<VerticalLayout> <!--Detailed Area-->
+						 <VerticalLayout padding="12,12,12,0" inset="10,10,10,10" bkcolor="#FFFFFFFF" borderround="10,10" bordersize="1" bordercolor="#FFDDDDDD" focusbordercolor="#FF883344">
+							<VerticalLayout name="contact_detail">
+								<HorizontalLayout height="100">
+									<Control name="contact_detail_pic" width="100" height="100" bkimage="file='photo_place_holder.png'" bordercolor="#FFEEEEEE" bordersize="1"/>
+									<Container width="10" />
+									<VerticalLayout>
+										<Label name="contact_detail_name" text="Hoban Washburn" font="3"/> 
+										<Label name="contact_detail_phone" text="(867)555-8080 Ext. 2" />
+										<Label name="contact_detail_email"text="hwashburn@serenity.org" />
+										<Label name="contact_detail_address1"text="4815 Horthbrook Ln" />
+										<Label name="contact_detail_address2" text="Reedley, CA 93654" />
+									</VerticalLayout>
+								</HorizontalLayout>
+								<VerticalLayout name="contact_detail_extra">
+									<Text text="Extra info 1" />
+									<Text text="Extra info 2" />
+								</VerticalLayout>
+							</VerticalLayout>
+						 </VerticalLayout>
+					</VerticalLayout>
+				</HorizontalLayout>
+			</TabLayout>
+		</VerticalLayout></HorizontalLayout>
+		<HorizontalLayout inset="3,0,3,3" height="25"> <!-- Footer -->
+			<HorizontalLayout bkimage="file='footer_bg.png'">
+			</HorizontalLayout>
+		</HorizontalLayout>
+	</VerticalLayout>
+</Window>

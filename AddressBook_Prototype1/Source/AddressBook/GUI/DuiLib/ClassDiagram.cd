@@ -1,0 +1,1425 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="TUnzip" Collapsed="true">
+    <Position X="45.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACIABAAAAABAEAAAAIAIAAAgEAAACEAAA=</HashCode>
+      <FileName>Utils\XUnzip.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CActiveXCtrl" Collapsed="true">
+    <Position X="43.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CohFABAgAAFKxAiAADcKUeAEAEIAhIAECkQ2JJCI0cQ=</HashCode>
+      <FileName>Control\UIActiveX.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CActiveXWnd" Collapsed="true">
+    <Position X="10.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAABAAAEaAAIAAAAAgAAAABAAAAAAAAICAAAAAAA=</HashCode>
+      <FileName>Control\UIActiveX.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CActiveXEnum" Collapsed="true">
+    <Position X="45.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAIAAAAIAABAAAgAAAAAAAAAAAgAAAAAAAgBAAEJA=</HashCode>
+      <FileName>Control\UIActiveX.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CActiveXFrameWnd" Collapsed="true">
+    <Position X="47.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAADAAQACIBEAAAAAAAAAACAAigAABAAABABGIEIA=</HashCode>
+      <FileName>Control\UIActiveX.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CActiveXUI" Collapsed="true">
+    <Position X="26.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAQKIIAEIEAABEAAABCwEABggAIAACoAAACAA=</HashCode>
+      <FileName>Control\UIActiveX.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CComboWnd" Collapsed="true">
+    <Position X="13" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAABAAAAIgAIAAACAAAAACBAAAAACAAAiAAAAAAA=</HashCode>
+      <FileName>Control\UICombo.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CDateTimeWnd" Collapsed="true">
+    <Position X="4" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAABAAAIIAAIAEAAAAAAAABAAAAAAAAICAAAgAgA=</HashCode>
+      <FileName>Control\UIDateTime.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CEditWnd" Collapsed="true">
+    <Position X="6.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAQBAAAIIAAIAEAAAAAAAABAAAAAAAAICAAAgAgA=</HashCode>
+      <FileName>Control\UIEdit.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CTxtWinHost" Collapsed="true">
+    <Position X="45.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DFBMGdMgsRbDHrTPAQYgIpCiUwtSgBJYAAk6MBJGaQk=</HashCode>
+      <FileName>Control\UIRichEdit.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CFlashEventHandler" Collapsed="true">
+    <Position X="49" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAABAAABAAAAAAAAEAABIAQAAAAABAAAAA=</HashCode>
+      <FileName>Utils\FlashEventHandler.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CDelegateBase" Collapsed="true">
+    <Position X="3.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAIYgAAkAAgAAAAAgAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Utils\UIDelegate.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CDelegateStatic" Collapsed="true">
+    <Position X="2.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAgAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Utils\UIDelegate.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CDelegate&lt;O, T&gt;" Collapsed="true">
+    <Position X="4.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgIQAAAAAAAAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\UIDelegate.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CEventSource" Collapsed="true">
+    <Position X="47.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AGAAAAAAAAAAAAAEEAAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\UIDelegate.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::STRINGorID" Collapsed="true">
+    <Position X="43.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\Utils.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CDuiPoint" Collapsed="true">
+    <Position X="50.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\Utils.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CDuiSize" Collapsed="true">
+    <Position X="43.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\Utils.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CDuiRect" Collapsed="true">
+    <Position X="52.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAgAgAEAIAAABAAAAAAAAIAAACAUAAgAA=</HashCode>
+      <FileName>Utils\Utils.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CStdPtrArray" Collapsed="true">
+    <Position X="50.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAJAAAAAEAAAAACAAAaABIEAAANIAAAAAAAAQAEAAAA=</HashCode>
+      <FileName>Utils\Utils.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CStdValArray" Collapsed="true">
+    <Position X="43.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAJAAIAAECAAAACAAAYAFAAAAAMAAAAAAAACQAAAAAA=</HashCode>
+      <FileName>Utils\Utils.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CDuiString" Collapsed="true">
+    <Position X="45.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IABAAAQAEBAAAAAAFAIAAQIAAAsoA4AACADggAQAACA=</HashCode>
+      <FileName>Utils\Utils.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CStdStringPtrMap" Collapsed="true">
+    <Position X="52.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEEAAAAAABACAAAQABAAAQAMIAAAAJAIAAAEAAAA=</HashCode>
+      <FileName>Utils\Utils.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CWaitCursor" Collapsed="true">
+    <Position X="49" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAIAgAAAEAAAAAAAA=</HashCode>
+      <FileName>Utils\Utils.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CVariant" Collapsed="true">
+    <Position X="47.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\Utils.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CWebBrowserEventHandler" Collapsed="true">
+    <Position X="50.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAcGBAEAAkIAABAAAFAAgAABQAAAKCAAAEAAgAAMAQ=</HashCode>
+      <FileName>Utils\WebBrowserEventHandler.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::WindowImplBase" Collapsed="true">
+    <Position X="26.25" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>GkABAABAAAMAIAqBAAIMgAJSBTIgOABAgAKCQAIQAAA=</HashCode>
+      <FileName>Utils\WinImplBase.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CNotifyPump" Collapsed="true">
+    <Position X="34.5" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAJAAAAAAAAAAAAAAACAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Core\UIBase.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CWindowWnd" Collapsed="true">
+    <Position X="7.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AwAAAABEAqoAAEIAACABQAIAABABAEBAAgABAAPAAYA=</HashCode>
+      <FileName>Core\UIBase.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::IContainerUI" Collapsed="true">
+    <Position X="28.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYEAAAAAAAAAAAAAAAABAAAAABAAAAAKIAAAABAAAA=</HashCode>
+      <FileName>Core\UIContainer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CScrollBarUI" Collapsed="true">
+    <Position X="28" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gIYrRBnMEPVIBsyEESC5wEhQOrOBAJ0EEwDTo0pBCaU=</HashCode>
+      <FileName>Control\UIScrollBar.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CContainerUI" Collapsed="true">
+    <Position X="26.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AYcMRYIDQagJSEYpCQAIB8VAGIjBGoUFaIAgIARACRA=</HashCode>
+      <FileName>Core\UIContainer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CControlUI" Collapsed="true">
+    <Position X="23.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>5NwF5wjUrLuvF1pIBuEAMv5TWtZidg+Hc1AG82dmDZA=</HashCode>
+      <FileName>Core\UIControl.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::IDialogBuilderCallback" Collapsed="true">
+    <Position X="32.25" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\UIDlgBuilder.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CDialogBuilder" Collapsed="true">
+    <Position X="49" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QQAAAAIAAAAAAAAAAAAAQAAACEAAAEAAAAAAAQgAAAA=</HashCode>
+      <FileName>Core\UIDlgBuilder.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::INotifyUI" Collapsed="true">
+    <Position X="41.25" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\UIManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::IMessageFilterUI" Collapsed="true">
+    <Position X="13.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\UIManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::ITranslateAccelerator" Collapsed="true">
+    <Position X="17.5" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\UIManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CPaintManagerUI" Collapsed="true">
+    <Position X="43.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>z8MBd1xEkk5LPHKGZUN2M9tUx3iBkg551zLOxJX6N1w=</HashCode>
+      <FileName>Core\UIManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CMarkup" Collapsed="true">
+    <Position X="50.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QYUAgAAiIBAEQAAgBAgBRAAAAAAAEAAAAgAAJBAAEAQ=</HashCode>
+      <FileName>Core\UIMarkup.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CMarkupNode" Collapsed="true">
+    <Position X="52.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAIAgIAhAhEAoAAQAAAAAAAAACAAAAgAQEBAE=</HashCode>
+      <FileName>Core\UIMarkup.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CRenderClip" Collapsed="true">
+    <Position X="45.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQQAEAAAgAEAIAAAGAEAAAAAAAAAAA=</HashCode>
+      <FileName>Core\UIRender.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CRenderEngine" Collapsed="true">
+    <Position X="47.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AhAgAAAAAIAAAAAAAAIwAAAAQAEAAAAAAUAAEAAAAIQ=</HashCode>
+      <FileName>Core\UIRender.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CChildLayoutUI" Collapsed="true">
+    <Position X="29.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAACAAAFAAAAAAAAIADAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Layout\UIChildLayout.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CHorizontalLayoutUI" Collapsed="true">
+    <Position X="31.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAABEADBAAEQAAAAAAAAQCAAAACAmAgAAAARABAA=</HashCode>
+      <FileName>Layout\UIHorizontalLayout.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CTabLayoutUI" Collapsed="true">
+    <Position X="33.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIIAAAAAAGAAAEAAAAAABAAACAAAAAAAIAQAAABUAAA=</HashCode>
+      <FileName>Layout\UITabLayout.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CTileLayoutUI" Collapsed="true">
+    <Position X="36" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAACAAACAIAEAAAAAIAEAACAAAEAAAAIAAAAAABAA=</HashCode>
+      <FileName>Layout\UITileLayout.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CVerticalLayoutUI" Collapsed="true">
+    <Position X="38.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QIAAAABEADAAAEQAAAAEAAAQCAEAACAiAgAAAABAAAA=</HashCode>
+      <FileName>Layout\UIVerticalLayout.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CSafeRelease&lt;T&gt;" Collapsed="true">
+    <Position X="49" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIQAAAAAAAAQAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Control\UIActiveX.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CButtonUI" Collapsed="true">
+    <Position X="23.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEgRFCETAAIUJAEAAACAABCAFCAgQAwAAYA8FAAMA=</HashCode>
+      <FileName>Control\UIButton.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CCheckBoxUI" Collapsed="true">
+    <Position X="23.5" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACACAAAAAAEAAAAAAAAAACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Control\UICheckBox.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CComboUI" Collapsed="true">
+    <Position X="29.5" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BsbkABFAEfCEMXZoU0RAFCQBSAVKBAQE6ARYI4FEQoQ=</HashCode>
+      <FileName>Control\UICombo.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CDateTimeUI" Collapsed="true">
+    <Position X="25.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ARAEAAAAAAgAEEAQAABgAAAACIAAAAAAAAAAAIBAAAA=</HashCode>
+      <FileName>Control\UIDateTime.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CEditUI" Collapsed="true">
+    <Position X="16.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AICAABBcAbBIKEYQFKAoAAAQCIFCCEQAwEAIA4FAGMA=</HashCode>
+      <FileName>Control\UIEdit.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CLabelUI" Collapsed="true">
+    <Position X="21.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QBQAAMACEaAAiGCpgJQTcAiCLklZCBUGAgFihQjBYEk=</HashCode>
+      <FileName>Control\UILabel.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CListHeaderUI" Collapsed="true">
+    <Position X="31.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAACEAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Control\UIList.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::IListCallbackUI" Collapsed="true">
+    <Position X="52.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Control\UIList.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::IListOwnerUI" Collapsed="true">
+    <Position X="34.5" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAECAAAAAAAAAAAAAAAAAAAAAAAQAAABAAAA=</HashCode>
+      <FileName>Control\UIList.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::IListUI" Collapsed="true">
+    <Position X="41.25" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAARAAAAAAAAAAAEAAAAAAAAAAAAABAAAAAAAAAAI=</HashCode>
+      <FileName>Control\UIList.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::IListItemUI" Collapsed="true">
+    <Position X="16.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAQAIAIAAEAAQAAEAAAAACAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Control\UIList.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CListBodyUI" Collapsed="true">
+    <Position X="38.25" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAhAAAAAAIAIAAAAAAAAAAAAAAIAAIAAAAAABAIAA=</HashCode>
+      <FileName>Control\UIList.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CListUI" Collapsed="true">
+    <Position X="38.25" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BsbsRZDCAPCEGVIpWETIFSRJSETIJIQFKIRgAAZEQgY=</HashCode>
+      <FileName>Control\UIList.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CListHeaderItemUI" Collapsed="true">
+    <Position X="30.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAQJFAEDJAIWYgAAAAAACQCilGACQEwAAKgwDBRKA=</HashCode>
+      <FileName>Control\UIList.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CListElementUI" Collapsed="true">
+    <Position X="20.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQCAAQBMALAIEEBQAQEAAAAACAAAAAAQAAAIQABAAIA=</HashCode>
+      <FileName>Control\UIList.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CListLabelElementUI" Collapsed="true">
+    <Position X="20.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAACAAAAAAAAAAAIQBAgAA=</HashCode>
+      <FileName>Control\UIList.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CListTextElementUI" Collapsed="true">
+    <Position X="20.5" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACIABAIAEAIAIIAAgACCBAAABAAAAAAAQBEAAA=</HashCode>
+      <FileName>Control\UIList.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CListContainerElementUI" Collapsed="true">
+    <Position X="23.5" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ARCAAQBMALAIEEBQAQEAAAAACAAAAAAAAAAIYABAAIA=</HashCode>
+      <FileName>Control\UIList.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::COptionUI" Collapsed="true">
+    <Position X="23.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAACAAAICAAGEJABAAAGEAECQBCQQAEUAIIAYAAAYM=</HashCode>
+      <FileName>Control\UIOption.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CProgressUI" Collapsed="true">
+    <Position X="19" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAICCQAkAUAJAACAAACAACAAAAAgAIgIAQARg=</HashCode>
+      <FileName>Control\UIProgress.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CRichEditUI" Collapsed="true">
+    <Position X="23.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>nJ1ahZEI6PCdpVQZKIAqIzyNH4yAAJUABBHgKQdhCmI=</HashCode>
+      <FileName>Control\UIRichEdit.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CSliderUI" Collapsed="true">
+    <Position X="19" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQCQAtkADAACEIAAABAAAAAKAACAKAAAAAAIABAAKE=</HashCode>
+      <FileName>Control\UISlider.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CTextUI" Collapsed="true">
+    <Position X="21.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAABAAAEAAAAAAAgACCABAAAEAAAAAAQREAAA=</HashCode>
+      <FileName>Control\UIText.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CTreeViewUI" Collapsed="true">
+    <Position X="38.25" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEIABBAABCSAIkQAAAAABAAICLBAAAhAKQAAAABAAgQ=</HashCode>
+      <FileName>Control\UITreeView.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CTreeNodeUI" Collapsed="true">
+    <Position X="23.5" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QRMAMAAEFibAMEAUCJwAhOAojIJARAiWCAUIUAJEA8o=</HashCode>
+      <FileName>Control\UITreeView.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuiLib::CWebBrowserUI" Collapsed="true">
+    <Position X="26.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FAAUCBMEEGlJBEJAIQFAQwQQDQEghLmBgAUQAhFAMoQ=</HashCode>
+      <FileName>Control\UIWebBrowser.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="__unnamed_struct_0040_2" Collapsed="true">
+    <Position X="27.5" Y="33.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACAEAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Utils\stb_image.c</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="__unnamed_struct_0040_3" Collapsed="true">
+    <Position X="31.5" Y="26.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAEAAAYAgAAgAAAAAAAhAAAAABACA=</HashCode>
+      <FileName>Utils\stb_image.c</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="__unnamed_struct_0040_5" Collapsed="true">
+    <Position X="23.5" Y="33.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIIAAAAAAIAAACCAAAAAAAEAAAAA=</HashCode>
+      <FileName>Utils\stb_image.c</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="__unnamed_struct_0040_6" Collapsed="true">
+    <Position X="31.5" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgACBABEAAIAAEDEAgMAAIBgAAgAAABAIBAQAAgAgg=</HashCode>
+      <FileName>Utils\stb_image.c</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="__unnamed_struct_0040_8" Collapsed="true">
+    <Position X="15.5" Y="33.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEEAAAAAAAAAAQAAAAAAAACAIABAIAAAgAA=</HashCode>
+      <FileName>Utils\stb_image.c</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="__unnamed_struct_0040_9" Collapsed="true">
+    <Position X="31.5" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIIAAAAgIAAAACCAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\stb_image.c</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="__unnamed_struct_0040_10" Collapsed="true">
+    <Position X="7.5" Y="33.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAQAAAIEAJAAgAgAAAgAAAAAAIAAA=</HashCode>
+      <FileName>Utils\stb_image.c</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="__unnamed_struct_0040_11" Collapsed="true">
+    <Position X="19.5" Y="31.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\stb_image.c</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="__unnamed_struct_0040_12" Collapsed="true">
+    <Position X="11.5" Y="31.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAQAAAAAAAAAAAAAAAIAAAIAAAAAAAAA=</HashCode>
+      <FileName>Utils\stb_image.c</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="__unnamed_struct_0040_14" Collapsed="true">
+    <Position X="3.5" Y="31.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAIAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\stb_image.c</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="__unnamed_struct_0040_15" Collapsed="true">
+    <Position X="27.5" Y="28.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAgAAAAAAAAAgAAA=</HashCode>
+      <FileName>Utils\stb_image.c</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="__unnamed_struct_0040_16" Collapsed="true">
+    <Position X="27.5" Y="23.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAEICAgAIAAARAQAgAEBAYAAgAAAAQAggAAAAJAQ=</HashCode>
+      <FileName>Utils\stb_image.c</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="__unnamed_struct_0049_1" Collapsed="true">
+    <Position X="49" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAACAAAAAIAAAAAAAEAEIAAAAAAAABgAA=</HashCode>
+      <FileName>Utils\XUnzip.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="__unnamed_struct_0049_2" Collapsed="true">
+    <Position X="50.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAACAAAAAIAAAAAAAEAEIAAAAAAAABgAA=</HashCode>
+      <FileName>Utils\XUnzip.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="tm_unz_s" Collapsed="true">
+    <Position X="27.5" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAACACAAAAAAAAgAAAAAAAQAAAIAAAAAAAAAA=</HashCode>
+      <FileName>Utils\XUnzip.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="unz_global_info_s" Collapsed="true">
+    <Position X="23.5" Y="28.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\XUnzip.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="unz_file_info_s" Collapsed="true">
+    <Position X="15.5" Y="28.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gEAAgCAAAACAAAAAAIAEAEAYAAIAAgAAAAAAAIAAEIA=</HashCode>
+      <FileName>Utils\XUnzip.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="z_stream_s" Collapsed="true">
+    <Position X="0.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAQAAAEAAAIAAAACQAAAIICAAEEAAQAAAEAAAA=</HashCode>
+      <FileName>Utils\XUnzip.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="inflate_huft_s" Collapsed="true">
+    <Position X="11.5" Y="26.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\XUnzip.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="inflate_blocks_state" Collapsed="true">
+    <Position X="23.5" Y="23.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAACAAAKAwCAACEAAAAAAAAAAAAIAQAAAAAAAgA=</HashCode>
+      <FileName>Utils\XUnzip.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="inflate_codes_state" Collapsed="true">
+    <Position X="15.5" Y="23.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABBQAAAAAAAACAAACAAAAAAAAAAACAgAAAAAAAAAA=</HashCode>
+      <FileName>Utils\XUnzip.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="internal_state" Collapsed="true">
+    <Position X="49" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAACAAAABAAAAAAAAAAAAAAAAAAAARAA=</HashCode>
+      <FileName>Utils\XUnzip.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="unz_file_info_internal_s" Collapsed="true">
+    <Position X="19.5" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\XUnzip.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="__unnamed_struct_0049_16" Collapsed="true">
+    <Position X="19.5" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAICAAAAAAAAAACAQoAAAAAAAAAAQAAAAAAAACA=</HashCode>
+      <FileName>Utils\XUnzip.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="__unnamed_struct_0049_17" Collapsed="true">
+    <Position X="11.5" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAhAAgAAAAAABgAAAAAAAEAAAAAAAACAjAgEAAAAQAA=</HashCode>
+      <FileName>Utils\XUnzip.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="__unnamed_struct_0049_18" Collapsed="true">
+    <Position X="8.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAgAAgAEAAAgAAAAAACgAAAAAAAAAABAAAEIiAAAA=</HashCode>
+      <FileName>Utils\XUnzip.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="__unnamed_struct_0049_19" Collapsed="true">
+    <Position X="3.5" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\XUnzip.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="__unnamed_struct_002c_1" Collapsed="true">
+    <Position X="15.5" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAACAAAAAIAAAAAAAEAEIAAAAAAAABgAA=</HashCode>
+      <FileName>Core\UIMarkup.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="__unnamed_struct_002c_2" Collapsed="true">
+    <Position X="7.5" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAACAAAAAIAAAAAAAEAEIAAAAAAAABgAA=</HashCode>
+      <FileName>Core\UIMarkup.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="__unnamed_struct_002e_1" Collapsed="true">
+    <Position X="43.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAACAAAAAIAAAAAAAEAEIAAAAAAAABgAA=</HashCode>
+      <FileName>Core\UIRender.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="__unnamed_struct_002e_2" Collapsed="true">
+    <Position X="45.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAACAAAAAIAAAAAAAEAEIAAAAAAAABgAA=</HashCode>
+      <FileName>Core\UIRender.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="IDownloadManager" Collapsed="true">
+    <Position X="45.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Utils\downloadmgr.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="IDownloadManagerVtbl" Collapsed="true">
+    <Position X="47.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAgAAAAAEAABAAAAA=</HashCode>
+      <FileName>Utils\downloadmgr.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="__unnamed_struct_0041_2" Collapsed="true">
+    <Position X="47.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACAEAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Utils\stb_image.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="DuiLib::tagFINDTABINFO" Collapsed="true">
+    <Position X="15.5" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAABAAAAAAAAAAAAAABAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\UIManager.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="DuiLib::tagFINDSHORTCUT" Collapsed="true">
+    <Position X="11.5" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Core\UIManager.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="DuiLib::tagTIMERINFO" Collapsed="true">
+    <Position X="3.5" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAIAQAAAAAAAAAAAAAAggAAAA=</HashCode>
+      <FileName>Core\UIManager.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="DuiLib::TITEM" Collapsed="true">
+    <Position X="50.75" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAIAAABAAAAAAAAABAAA=</HashCode>
+      <FileName>Utils\Utils.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="DuiLib::tagTNotifyUI" Collapsed="true">
+    <Position X="11.5" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIEAAAAAEgQAAAAAAAAAAAAAAAACAAAAAgAAAA=</HashCode>
+      <FileName>Core\UIDefine.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="DuiLib::DUI_MSGMAP_ENTRY" Collapsed="true">
+    <Position X="43.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAEAAAAQAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\UIDefine.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="DuiLib::DUI_MSGMAP" Collapsed="true">
+    <Position X="52.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAAAACAAAAAAAQAAAA=</HashCode>
+      <FileName>Core\UIDefine.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="DuiLib::tagTFontInfo" Collapsed="true">
+    <Position X="43.75" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAACABAAAAAAAAAAIQAAAAAAIAAAAACAAAAA=</HashCode>
+      <FileName>Core\UIManager.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="DuiLib::tagTImageInfo" Collapsed="true">
+    <Position X="45.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAgAAAAAEAAAAAAAAAggAAAAQAIAAEAAAAg=</HashCode>
+      <FileName>Core\UIManager.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="DuiLib::tagTDrawInfo" Collapsed="true">
+    <Position X="50.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAABAAAgAQQAAAAAAAAAAAAAAAIAAAAEYAACpAAAA=</HashCode>
+      <FileName>Core\UIManager.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="DuiLib::tagTPercentInfo" Collapsed="true">
+    <Position X="47.25" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAAAAAgAAAAIAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Core\UIManager.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="DuiLib::tagTResInfo" Collapsed="true">
+    <Position X="49" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAABAAAAwAAEAAQCAAAAAAAAAAAEAAEAgAA=</HashCode>
+      <FileName>Core\UIManager.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="DuiLib::tagTEventUI" Collapsed="true">
+    <Position X="52.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAgQAAIAAAAAAAAAAAAAiQAAAAgAAAA=</HashCode>
+      <FileName>Core\UIManager.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="DuiLib::tagTListInfoUI" Collapsed="true">
+    <Position X="7.5" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAEAACCCQAAQAAAJEACAGAACAEBAIAkCAAAAAAAAAAA=</HashCode>
+      <FileName>Control\UIList.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Typedef Name="stbi_uc" Collapsed="true">
+    <Position X="47.25" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\stb_image.c</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="stbi_io_callbacks" Collapsed="true">
+    <Position X="27.5" Y="35.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\stb_image.c</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="stbi__uint16" Collapsed="true">
+    <Position X="43.75" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\stb_image.c</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="stbi__int16" Collapsed="true">
+    <Position X="50.75" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\stb_image.c</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="stbi__uint32" Collapsed="true">
+    <Position X="45.5" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\stb_image.c</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="stbi__int32" Collapsed="true">
+    <Position X="52.5" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\stb_image.c</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="validate_uint32" Collapsed="true">
+    <Position X="43.75" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\stb_image.c</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="stbi__context" Collapsed="true">
+    <Position X="31.5" Y="28.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\stb_image.c</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="stbi__huffman" Collapsed="true">
+    <Position X="23.5" Y="35.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\stb_image.c</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="stbi__jpeg" Collapsed="true">
+    <Position X="31.5" Y="23.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\stb_image.c</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="resample_row_func" Collapsed="true">
+    <Position X="49" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\stb_image.c</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="stbi__resample" Collapsed="true">
+    <Position X="15.5" Y="35.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\stb_image.c</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="stbi__zhuffman" Collapsed="true">
+    <Position X="31.5" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\stb_image.c</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="stbi__zbuf" Collapsed="true">
+    <Position X="7.5" Y="35.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\stb_image.c</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="stbi__pngchunk" Collapsed="true">
+    <Position X="19.5" Y="33.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\stb_image.c</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="stbi__png" Collapsed="true">
+    <Position X="11.5" Y="33.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\stb_image.c</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="stbi__pic_packet" Collapsed="true">
+    <Position X="3.5" Y="33.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\stb_image.c</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="stbi__gif_lzw" Collapsed="true">
+    <Position X="27.5" Y="30.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\stb_image.c</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="stbi__gif" Collapsed="true">
+    <Position X="27.5" Y="25.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\stb_image.c</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="ZRESULT" Collapsed="true">
+    <Position X="50.75" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\UIManager.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="ZIPENTRY" Collapsed="true">
+    <Position X="15.5" Y="20.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\UIMarkup.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="ZIPENTRYW" Collapsed="true">
+    <Position X="7.5" Y="20.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\UIMarkup.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="tm_unz" Collapsed="true">
+    <Position X="27.5" Y="20.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\XUnzip.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="unz_global_info" Collapsed="true">
+    <Position X="23.5" Y="30.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\XUnzip.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="unz_file_info" Collapsed="true">
+    <Position X="15.5" Y="30.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\XUnzip.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="Byte" Collapsed="true">
+    <Position X="45.5" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\XUnzip.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="uInt" Collapsed="true">
+    <Position X="49" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\XUnzip.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="uLong" Collapsed="true">
+    <Position X="52.5" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\XUnzip.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="voidpf" Collapsed="true">
+    <Position X="47.25" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\XUnzip.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="voidp" Collapsed="true">
+    <Position X="45.5" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\XUnzip.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="z_off_t" Collapsed="true">
+    <Position X="49" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\XUnzip.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="alloc_func" Collapsed="true">
+    <Position X="43.75" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\XUnzip.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="free_func" Collapsed="true">
+    <Position X="43.75" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\XUnzip.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="z_stream" Collapsed="true">
+    <Position X="3.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\XUnzip.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="z_streamp" Collapsed="true">
+    <Position X="3.5" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\XUnzip.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="uch" Collapsed="true">
+    <Position X="7.5" Y="30.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\XUnzip.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="uchf" Collapsed="true">
+    <Position X="7.5" Y="28.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\XUnzip.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="ush" Collapsed="true">
+    <Position X="19.5" Y="28.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\XUnzip.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="ushf" Collapsed="true">
+    <Position X="19.5" Y="26.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\XUnzip.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="ulg" Collapsed="true">
+    <Position X="50.75" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\XUnzip.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="check_func" Collapsed="true">
+    <Position X="47.25" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\XUnzip.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="inflate_huft" Collapsed="true">
+    <Position X="11.5" Y="28.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\XUnzip.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="inflate_blocks_statef" Collapsed="true">
+    <Position X="23.5" Y="25.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\XUnzip.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="inflate_codes_statef" Collapsed="true">
+    <Position X="15.5" Y="25.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\XUnzip.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="inflate_block_mode" Collapsed="true">
+    <Position X="3.5" Y="28.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\XUnzip.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="inflate_codes_mode" Collapsed="true">
+    <Position X="23.5" Y="20.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\XUnzip.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="inflate_mode" Collapsed="true">
+    <Position X="7.5" Y="25.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\XUnzip.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="unz_file_info_internal" Collapsed="true">
+    <Position X="19.5" Y="23.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\XUnzip.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LUFILE" Collapsed="true">
+    <Position X="19.5" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\XUnzip.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="file_in_zip_read_info_s" Collapsed="true">
+    <Position X="11.5" Y="23.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\XUnzip.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="unz_s" Collapsed="true">
+    <Position X="11.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\XUnzip.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="unzFile" Collapsed="true">
+    <Position X="8.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\XUnzip.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="TUnzipHandleData" Collapsed="true">
+    <Position X="3.5" Y="23.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\XUnzip.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="DuiLib::FINDTABINFO" Collapsed="true">
+    <Position X="15.5" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\UIManager.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="DuiLib::FINDSHORTCUT" Collapsed="true">
+    <Position X="11.5" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\UIManager.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="DuiLib::TIMERINFO" Collapsed="true">
+    <Position X="3.5" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\UIManager.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="DuiLib::DllGetClassObjectFunc" Collapsed="true">
+    <Position X="49" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Control\UIActiveX.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="DuiLib::FINDCONTROLPROC" Collapsed="true">
+    <Position X="52.5" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\UIControl.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="DuiLib::TNotifyUI" Collapsed="true">
+    <Position X="11.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\UIDefine.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="DuiLib::DUI_PMSG" Collapsed="true">
+    <Position X="50.75" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\UIDefine.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="DuiLib::TFontInfo" Collapsed="true">
+    <Position X="52.5" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\UIManager.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="DuiLib::TImageInfo" Collapsed="true">
+    <Position X="43.75" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\UIManager.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="DuiLib::TDrawInfo" Collapsed="true">
+    <Position X="49" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\UIManager.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="DuiLib::TPercentInfo" Collapsed="true">
+    <Position X="45.5" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\UIManager.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="DuiLib::TResInfo" Collapsed="true">
+    <Position X="47.25" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\UIManager.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="DuiLib::TEventUI" Collapsed="true">
+    <Position X="50.75" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\UIManager.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="DuiLib::LPCREATECONTROL" Collapsed="true">
+    <Position X="45.5" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\UIManager.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="DuiLib::PULVCompareFunc" Collapsed="true">
+    <Position X="47.25" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Control\UIList.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="DuiLib::TListInfoUI" Collapsed="true">
+    <Position X="7.5" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Control\UIList.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Enum Name="__unnamed_enum_0040_1" Collapsed="true">
+    <Position X="45.5" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAABAAAAAAAAAAEAAABAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Utils\stb_image.c</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="__unnamed_enum_0040_4" Collapsed="true">
+    <Position X="49" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAAgAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\stb_image.c</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="__unnamed_enum_0040_13" Collapsed="true">
+    <Position X="47.25" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAECAAAABAAIAAAAAAAhAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\stb_image.c</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="__unnamed_enum_0049_5" Collapsed="true">
+    <Position X="3.5" Y="26.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAABAEAAAAgEIAAAgAiAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Utils\XUnzip.cpp</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="__unnamed_enum_0049_9" Collapsed="true">
+    <Position X="23.5" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAgIAAAAAAACAhAAAAAAAAEEAAAgAAAg=</HashCode>
+      <FileName>Utils\XUnzip.cpp</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="__unnamed_enum_0049_13" Collapsed="true">
+    <Position X="7.5" Y="23.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAQAgCAgAAAAAAAAAAAAAQAAAgAgAAEAAAAQCAAAAAA=</HashCode>
+      <FileName>Utils\XUnzip.cpp</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="__unnamed_enum_0041_1" Collapsed="true">
+    <Position X="50.75" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAABAAAAAAAAAAEAAABAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Utils\stb_image.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="DuiLib::UILIB_RESOURCETYPE" Collapsed="true">
+    <Position X="45.5" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAQAAAQAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Utils\WinImplBase.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="DuiLib::DuiSig" Collapsed="true">
+    <Position X="52.5" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABIAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\UIDefine.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="DuiLib::EVENTTYPE_UI" Collapsed="true">
+    <Position X="43.75" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>YAAFAABACGxAAIgAwABBAAAAEAwAEEQAAAAAQAAAACA=</HashCode>
+      <FileName>Core\UIManager.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="DuiLib::__unnamed_enum_002d_1" Collapsed="true">
+    <Position X="43.75" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAACAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\UIMarkup.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
