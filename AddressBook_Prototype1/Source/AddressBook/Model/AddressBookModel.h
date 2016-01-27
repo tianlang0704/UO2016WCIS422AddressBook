@@ -7,6 +7,7 @@
 #include <map>
 #include <algorithm>
 #include <fstream>
+#include <sstream>
 
 #define DATA_FILE_NAME "data.db"
 #define ADDRESS1_HEADER_NAME "ADDRESS1"
@@ -47,17 +48,20 @@ public:
 
 	void SetHeaders(vector<string> headers);
 	void GetHeaders(vector<string> headers);
+	void AddHeader(string newHeader);
 	string GetName() const;
 	void SetName(string name);
 	vector< map<string, string> > &GetData();
 	int GetSize();
 
+	bool IsChanged();
 	bool IsDup();
 
 private:
 	string m_AddressBookName;
 	vector<string> m_Headers;
 	vector< map< string, string> > m_ContactInfoList;
+	bool m_Changed;
 };
 
 class ABSort

@@ -4,6 +4,8 @@
 #include "EditWindow.h"
 #include "CustomColumnsWindow.h"
 #include "../../Model/AddressBookModel.h"
+#include <windows.h>
+#include <shobjidl.h> 
 
 #define CON_LIST_ID "ContactListMember"
 
@@ -45,9 +47,15 @@ void AddressBookWindow::Notify(TNotifyUI& msg)
 {
 	if (msg.sType == DUI_MSGTYPE_WINDOWINIT)
 		Prepare();
+	else if (msg.sType == DUI_MSGTYPE_TEXTCHANGED)
+	{
+		if (msg.pSender->GetName() == "edit_search")
+			Search(msg.pSender->GetText().GetData());
+	}
 	else if (msg.sType == DUI_MSGTYPE_ITEMACTIVATE)
 	{
-		OnContactListActivate(msg);
+		if (msg.pSender->GetUserData() == CON_LIST_ID)
+			OnContactListActivate(msg);
 	}
 	else if (msg.sType == DUI_MSGTYPE_ITEMCLICK)
 	{
@@ -66,7 +74,7 @@ void AddressBookWindow::Notify(TNotifyUI& msg)
 			Exit();
 		else if (msg.pSender->GetName() == "menu_btn_export")
 			Export();
-		else if (msg.pSender->GetName() == "menu_btn_export")
+		else if (msg.pSender->GetName() == "menu_btn_import")
 			Import();
 		else if (msg.pSender->GetName() == "menu_btn_sort_zip")
 			Sort(ZIPCODE_HEADER_NAME);
@@ -93,6 +101,11 @@ void AddressBookWindow::Notify(TNotifyUI& msg)
 			Save();
 		else if (msg.pSender->GetName() == "tool_btn_close")
 			RemoveTab();
+		else if (msg.pSender->GetName() == "tool_btn_export")
+			Export();
+		else if (msg.pSender->GetName() == "tool_btn_import")
+			Import();
+
 	}
 	else if (msg.sType == _T("selectchanged"))
 	{
@@ -103,6 +116,66 @@ void AddressBookWindow::Notify(TNotifyUI& msg)
 
 	}
 };
+
+void AddressBookWindow::OpenMenu(CDuiPoint p, STRINGorID fileName)
+{
+	CMenuWnd* pMenu = new CMenuWnd(NULL, &m_PaintManager);
+	CDuiPoint point = p;
+	ClientToScreen(m_hWnd, &point);
+	pMenu->Init(NULL, fileName, NULL, point);
+};
+
+int AddressBookWindow::OpenFileDialog(string *out, DWORD flagAdd, DWORD flagRemove)
+{
+	HRESULT hr = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED |
+		COINIT_DISABLE_OLE1DDE);
+	if (!SUCCEEDED(hr))
+		return 1;
+
+	IFileOpenDialog *pFileOpen;
+
+	// Create the FileOpenDialog object.
+	hr = CoCreateInstance(CLSID_FileOpenDialog, NULL, CLSCTX_ALL,
+		IID_IFileOpenDialog, reinterpret_cast<void**>(&pFileOpen));
+	if (!SUCCEEDED(hr))
+		return 2;
+	
+	// Setting options
+	DWORD dwFlags;
+	pFileOpen->GetOptions(&dwFlags);
+	pFileOpen->SetOptions(dwFlags | FOS_PATHMUSTEXIST | flagAdd & ~flagRemove);
+
+	// Show the Open dialog box.
+	hr = pFileOpen->Show(NULL);
+	if (hr != S_OK)
+		return 3;
+	
+	// Get the file name from the dialog box.
+	IShellItem *pItem;
+	hr = pFileOpen->GetResult(&pItem);
+	if (!SUCCEEDED(hr))
+		return 4;
+	PWSTR pszFilePath;
+	hr = pItem->GetDisplayName(SIGDN_FILESYSPATH, &pszFilePath);
+	if (!SUCCEEDED(hr))
+		return 5;
+
+	size_t retNum;
+	int len = wcslen(pszFilePath);
+	char *outBuff = (char *)malloc(len + 1);
+	wcstombs_s(&retNum, outBuff, (size_t)((len + 1) * sizeof(char)), pszFilePath, (size_t)((len + 1) * sizeof(WCHAR)));
+
+	(*out) = outBuff;
+	
+	free(outBuff);
+	CoTaskMemFree(pszFilePath);
+
+	pItem->Release();
+	pFileOpen->Release();
+	CoUninitialize();
+
+	return 0;
+}
 
 void AddressBookWindow::OnTabSelect(TNotifyUI &msg)
 {
@@ -122,7 +195,7 @@ void AddressBookWindow::OnContactListActivate(TNotifyUI &msg)
 {
 	CHorizontalLayoutUI *pTabContent = m_TabContexts[m_currentTabIndex].pTabContent;
 	CListUI *contactList = static_cast<CListUI *>(pTabContent->FindSubControl("contact_list"));
-	Edit(contactList->GetCurSel());
+	Edit(contactList->GetItemIndex(msg.pSender));
 }
 
 void AddressBookWindow::Edit(int index)
@@ -142,14 +215,6 @@ void AddressBookWindow::Edit(int index)
 	UpdateContactList();
 	ShowDetail(index);
 }
-
-void AddressBookWindow::OpenMenu(CDuiPoint p, STRINGorID fileName)
-{
-	CMenuWnd* pMenu = new CMenuWnd(NULL, &m_PaintManager);
-	CDuiPoint point = p;
-	ClientToScreen(m_hWnd, &point);
-	pMenu->Init(NULL, fileName, NULL, point);
-};
 
 void AddressBookWindow::Open()
 {
@@ -206,36 +271,66 @@ void AddressBookWindow::Save()
 	tab->SetText(name.c_str());
 }
 
-void AddressBookWindow::CheckUnsave()
-{
-
-
-}
-
 void AddressBookWindow::Exit()
 {
-	CheckUnsave();
+	if (CheckUnsave())
+		return;
 	this->Close();
 }
 
 void AddressBookWindow::Export()
 {
+	if (m_currentTabIndex < 0)
+		return;
 
+	string fileName;
+	int res = OpenFileDialog(&fileName, FOS_CREATEPROMPT | FOS_OVERWRITEPROMPT, FOS_FILEMUSTEXIST);
 
+	if (res == 3)
+		return;
 
+	AddressBookModel *addressBook = m_TabContexts[m_currentTabIndex].pAddressBook;
+	if (addressBook->Export(fileName))
+	{
+		MessageBox(NULL, "Export failed", "Warning", MB_OK);
+	}
 }
 
 void AddressBookWindow::Import()
 {
+	string fileName;
+	int res = OpenFileDialog(&fileName);
 
+	if (res == 3)
+		return;
 
+	AddressBookModel *addressBook = new AddressBookModel();
+	if (addressBook->Import(fileName))
+	{
+		MessageBox(NULL, "Import failed", "Warning", MB_OK);
+	}
 
+	AddTab(addressBook);
 }
 
 void AddressBookWindow::Sort(string header)
 {
 	AddressBookModel *addressBook = m_TabContexts[m_currentTabIndex].pAddressBook;
 	addressBook->SortBy(header);
+
+	UpdateContactList();
+}
+
+void AddressBookWindow::Search(string searchStr)
+{
+	if (CheckUnsave())
+		return;
+
+	if (m_currentTabIndex < 0)
+		return;
+
+	AddressBookModel *addressBook = m_TabContexts[m_currentTabIndex].pAddressBook;
+	addressBook->Search(searchStr);
 
 	UpdateContactList();
 }
@@ -406,8 +501,10 @@ void AddressBookWindow::RemoveTab()
 	m_TabContexts.erase(it);
 
 	if (m_TabContexts.size() <= 0)
+	{
+		m_currentTabIndex = -1;
 		return;
-
+	}
 	static_cast<COptionUI *>(m_TabBar->GetItemAt(0))->Selected(true);
 }
 
@@ -427,7 +524,6 @@ void AddressBookWindow::AddContact()
 
 void AddressBookWindow::Prepare()
 {
-
 	//List
 	CListUI *ContactList = static_cast<CListUI*>(m_PaintManager.FindControl(_T("contact_list")));
 	if (ContactList != NULL)
@@ -443,4 +539,19 @@ void AddressBookWindow::Prepare()
 	CTabLayoutUI *TabContentContainer = static_cast<CTabLayoutUI*>(m_PaintManager.FindControl(_T("tab_content_container")));
 	if (TabContentContainer != NULL)
 		TabContentContainer->RemoveAll();
+}
+
+bool AddressBookWindow::CheckUnsave()
+{
+	if (m_currentTabIndex < 0)
+		return false;
+
+	AddressBookModel *addressBook = m_TabContexts[m_currentTabIndex].pAddressBook;
+	if (addressBook->IsChanged())
+	{
+		if(MessageBox(NULL, "There are unsaved changes, do you want to discard the changes?", "Unsaved changeds", MB_OKCANCEL) != 1)
+			return true;
+	}
+
+	return false;
 }

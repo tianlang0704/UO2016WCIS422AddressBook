@@ -41,7 +41,7 @@
 				<Button name="tool_btn_export"text="Export" height="25" width="50" padding="3,0,3,0"/>
 				<Button name="tool_btn_import"text="Import" height="25" width="50" padding="3,0,3,0"/>
 				<Container />
-				<Edit name="search_text" height="25" text="Input name to search" bordercolor="#C6CFD8"  textcolor="#FF4422AA" bkimage="file='search_bg.png' source='0,0,258,23' corner='1,1,1,1'"/>
+				<Edit name="edit_search" height="25" text="Input name to search" bordercolor="#C6CFD8"  textcolor="#FF4422AA" bkimage="file='search_bg.png' source='0,0,258,23' corner='1,1,1,1'"/>
 				<Button name="tool_btn_close" text="X" height="25" width="30" padding="3,0,3,0"/>
 			</HorizontalLayout>
 			<Container bkcolor="#FFDDDDDD" height="1" />

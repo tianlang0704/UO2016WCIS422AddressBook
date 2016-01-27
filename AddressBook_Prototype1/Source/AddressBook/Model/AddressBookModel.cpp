@@ -7,16 +7,18 @@ AddressBookModel::AddressBookModel(const AddressBookModel& abm)
 	vector< map<string, string> > buff;
 	abm.GetAllContacts(&buff);
 	m_ContactInfoList = buff;
+	m_Changed = false;
 }
 
 AddressBookModel::AddressBookModel()
 {
-	
+	m_Changed = false;
 }
 
 AddressBookModel::AddressBookModel(vector<string> headers)
 {
 	m_Headers = headers;
+	m_Changed = false;
 }
 
 AddressBookModel::~AddressBookModel()
@@ -53,12 +55,16 @@ int AddressBookModel::Open(const string addresBookName)
 int AddressBookModel::Search(const string str)
 {
 	Database db(DATA_FILE_NAME);
+	vector< map<string, string> > listBuff;
 
 	if (!db.IsTableExist(m_AddressBookName))
 		return 1;
 
-	if (db.SearchStringInFields(m_AddressBookName, m_Headers, str, &m_ContactInfoList))
-		return 1;
+	if (db.SearchStringInFields(m_AddressBookName, m_Headers, str, &listBuff))
+		return 2;
+
+	m_ContactInfoList = listBuff;
+	m_Changed = false;
 
 	return 0;
 }
@@ -76,6 +82,7 @@ int AddressBookModel::Save()
 	for (auto &i : m_ContactInfoList)
 		db.AddRecord(m_AddressBookName, i);
 
+	m_Changed = false;
 	return 0;
 }
 
@@ -93,6 +100,7 @@ void AddressBookModel::AddNewContact(const map<string, string> contactInfo)
 	}
 
 	m_ContactInfoList.push_back(newContact);
+	m_Changed = true;
 }
 
 int AddressBookModel::UpdateContact(const int index, const map<string, string> contactInfo)
@@ -104,7 +112,7 @@ int AddressBookModel::UpdateContact(const int index, const map<string, string> c
 		if(contactInfo.find(j) != contactInfo.end())
 			m_ContactInfoList[index][j] = contactInfo.at(j);
 		
-
+	m_Changed = true;
 	return 0;
 }
 
@@ -132,13 +140,44 @@ void AddressBookModel::SortBy(const string fieldName, bool bASC)
 	sort(m_ContactInfoList.begin(), m_ContactInfoList.end(), objSort);
 }
 
-//int AddressBookModel::Import(string fileName)
-//{
-//
-//
-//
-//}
-//
+int AddressBookModel::Import(string fileName)
+{
+	ifstream infile(fileName);
+	char lineBuff[500];
+	char fieldBuff[500];
+	string headerBuff;
+
+
+	infile.getline(lineBuff, (streamsize)500);
+	stringstream ss(lineBuff);
+	while (!ss.eof())
+	{
+		headerBuff = "";
+		ss >> headerBuff;
+		if (headerBuff != "")
+			AddHeader(headerBuff);
+	}
+
+	map<string, string> contactBuff;
+	while (!infile.eof())
+	{
+		lineBuff[0] = 0;
+		infile.getline(lineBuff, 500);
+		if (lineBuff[0] == 0)
+			continue;
+		stringstream ss(lineBuff);
+		for (string &h : m_Headers)
+		{
+			ss.getline(fieldBuff, 500, '\t');
+			contactBuff[h] = fieldBuff;
+		}
+
+		AddNewContact(contactBuff);
+	}
+
+	return 0;
+}
+
 
 int AddressBookModel::Export(string fileName) const
 {
@@ -148,14 +187,14 @@ int AddressBookModel::Export(string fileName) const
 		return 1;
 
 	for (auto &i : m_Headers)
-		of << i << "/t";
+		of << i << "\t";
 	of << endl;
 
 	for (auto &i : m_ContactInfoList)
 	{
-		for (auto &j : i)
+		for (auto &j : m_Headers)
 		{
-			of << j.second << "/t";
+			of << i.at(j) << "\t";
 		}
 
 		of << endl;
@@ -189,6 +228,12 @@ void AddressBookModel::GetHeaders(vector<string> headers)
 	headers = m_Headers;
 }
 
+void AddressBookModel::AddHeader(string newHeader)
+{
+	if (find(m_Headers.begin(), m_Headers.end(), newHeader) == m_Headers.end())
+		m_Headers.push_back(newHeader);
+}
+
 int AddressBookModel::GetSize()
 {
 	return m_ContactInfoList.size();
@@ -199,4 +244,9 @@ bool AddressBookModel::IsDup()
 	Database db(DATA_FILE_NAME);
 
 	return db.IsTableExist(m_AddressBookName);
+}
+
+bool AddressBookModel::IsChanged()
+{
+	return m_Changed;
 }

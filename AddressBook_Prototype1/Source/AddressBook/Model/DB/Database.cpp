@@ -58,29 +58,35 @@ int Database::SearchStringInFields(
 	string sortField,
 	bool bAsc) const
 {
-	if (!Util::IsLetterNumberDash(tableName) || !Util::IsLetterNumberDash(sortField))
-		return 2;
-
-	string order = " ORDER BY " + sortField + (bAsc ? " ASC;" : " DSC;");
-	string sql = "SELECT * FROM " + Util::ToUpper(tableName) + " WHERE ";
-
-	auto it = fieldNames.cbegin();
-	while (it != fieldNames.cend())
+	string sql = "";
+	if (searchStr == "")
 	{
-		if (!Util::IsLetterNumberDash((*it)))
-			return 2;
-		sql.append(Util::ToUpper((*it) + " LIKE '"));
-		//*TODO: Check value
-		sql.append(searchStr + "'");
-
-		++it;
-		if (it != fieldNames.cend())
-			sql.append(" OR ");
+		sql = "SELECT * FROM " + Util::ToUpper(tableName) + ";";
 	}
+	else
+	{ 
+		if (!Util::IsLetterNumberDash(tableName) || !Util::IsLetterNumberDash(sortField))
+			return 2;
 
-	sql += order;
+		sql = "SELECT * FROM " + Util::ToUpper(tableName) + " WHERE ";
+		string order = " ORDER BY " + sortField + (bAsc ? " ASC;" : " DSC;");
 
-	cout << sql;
+		auto it = fieldNames.cbegin();
+		while (it != fieldNames.cend())
+		{
+			if (!Util::IsLetterNumberDash((*it)))
+				return 2;
+			sql.append(Util::ToUpper((*it) + " LIKE '"));
+			//*TODO: Check value
+			sql.append(searchStr + "'");
+
+			++it;
+			if (it != fieldNames.cend())
+				sql.append(" OR ");
+		}
+
+		sql += order;
+	}
 
 	return Exec(sql, out);
 }

@@ -4,6 +4,15 @@ AddressBook_Prototype1
 
 
 Updates
+2016-01-27(L2)
+Added: Import/Export
+Added: Search
+Added: Unsave prompt
+fixed: Little bugs here and there
+
+Known bugs: 
+saving is still a little bit buggy
+
 
 2016-01-26(L1)
 Modified: Press enter to submit input in pop up dialogs

@@ -1,41 +1,3 @@
-\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\duilib.pch
-\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\vc120.pdb
-\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\vc120.idb
-\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\stdafx.obj
-\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\uislider.obj
-\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\uitext.obj
-\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\uitreeview.obj
-\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\uiwebbrowser.obj
-\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\uibase.obj
-\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\uicontainer.obj
-\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\uicontrol.obj
-\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\uidlgbuilder.obj
-\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\uimanager.obj
-\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\uimarkup.obj
-\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\uirender.obj
-\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\uichildlayout.obj
-\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\uihorizontallayout.obj
-\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\uitablayout.obj
-\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\uitilelayout.obj
-\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\uiverticallayout.obj
-\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\uilib.obj
-\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\uidelegate.obj
-\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\utils.obj
-\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\winimplbase.obj
-\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\uiactivex.obj
-\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\uibutton.obj
-\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\uicheckbox.obj
-\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\uicombo.obj
-\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\uidatetime.obj
-\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\uiedit.obj
-\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\uilabel.obj
-\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\uilist.obj
-\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\uioption.obj
-\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\uiprogress.obj
-\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\uirichedit.obj
-\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\uiscrollbar.obj
-\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\stb_image.obj
-\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\xunzip.obj
 d:\[c]proj\bitbucket\addressbook\addressbook\gui\duilib\build\debug\duilib.pch
 d:\[c]proj\bitbucket\addressbook\addressbook\gui\duilib\build\debug\vc120.pdb
 d:\[c]proj\bitbucket\addressbook\addressbook\gui\duilib\build\debug\vc120.idb
@@ -74,7 +36,6 @@ d:\[c]proj\bitbucket\addressbook\addressbook\gui\duilib\build\debug\uirichedit.o
 d:\[c]proj\bitbucket\addressbook\addressbook\gui\duilib\build\debug\uiscrollbar.obj
 d:\[c]proj\bitbucket\addressbook\addressbook\gui\duilib\build\debug\stb_image.obj
 d:\[c]proj\bitbucket\addressbook\addressbook\gui\duilib\build\debug\xunzip.obj
-\\magi-moonblade\c work\bitbucket\cis422\addressbook\bin\duilib_d.lib
 d:\[c]proj\bitbucket\addressbook\bin\duilib_d.lib
 d:\[c]proj\bitbucket\addressbook\addressbook\gui\duilib\build\debug\duilib.tlog\cl.command.1.tlog
 d:\[c]proj\bitbucket\addressbook\addressbook\gui\duilib\build\debug\duilib.tlog\cl.read.1.tlog

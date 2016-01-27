@@ -56,6 +56,7 @@ private:
 private:
 	void Prepare();
 	void OpenMenu(CDuiPoint p, STRINGorID fileName);
+	int OpenFileDialog(string *out, DWORD flagAdd = 0, DWORD flagRemove = 0);
 
 	void AddTab(AddressBookModel *ad = NULL);
 	void RemoveTab();
@@ -65,11 +66,12 @@ private:
 	void UpdateContactList();
 	void Open();
 	void Save();
-	void CheckUnsave();
 	void Exit();
 	void Export();
 	void Import();
 	void Sort(string header);
+	void Search(string searchStr);
+	bool CheckUnsave();
 
 	void OnTabSelect(TNotifyUI &msg);
 	void OnContactListSelect(TNotifyUI &msg);
