@@ -1,45 +1,84 @@
-d:\test\addressbook\gui\duilib\build\debug\duilib.pch
-d:\test\addressbook\gui\duilib\build\debug\vc120.pdb
-d:\test\addressbook\gui\duilib\build\debug\vc120.idb
-d:\test\addressbook\gui\duilib\build\debug\stdafx.obj
-d:\test\addressbook\gui\duilib\build\debug\uislider.obj
-d:\test\addressbook\gui\duilib\build\debug\uitext.obj
-d:\test\addressbook\gui\duilib\build\debug\uitreeview.obj
-d:\test\addressbook\gui\duilib\build\debug\uiwebbrowser.obj
-d:\test\addressbook\gui\duilib\build\debug\uibase.obj
-d:\test\addressbook\gui\duilib\build\debug\uicontainer.obj
-d:\test\addressbook\gui\duilib\build\debug\uicontrol.obj
-d:\test\addressbook\gui\duilib\build\debug\uidlgbuilder.obj
-d:\test\addressbook\gui\duilib\build\debug\uimanager.obj
-d:\test\addressbook\gui\duilib\build\debug\uimarkup.obj
-d:\test\addressbook\gui\duilib\build\debug\uirender.obj
-d:\test\addressbook\gui\duilib\build\debug\uichildlayout.obj
-d:\test\addressbook\gui\duilib\build\debug\uihorizontallayout.obj
-d:\test\addressbook\gui\duilib\build\debug\uitablayout.obj
-d:\test\addressbook\gui\duilib\build\debug\uitilelayout.obj
-d:\test\addressbook\gui\duilib\build\debug\uiverticallayout.obj
-d:\test\addressbook\gui\duilib\build\debug\uilib.obj
-d:\test\addressbook\gui\duilib\build\debug\uidelegate.obj
-d:\test\addressbook\gui\duilib\build\debug\utils.obj
-d:\test\addressbook\gui\duilib\build\debug\winimplbase.obj
-d:\test\addressbook\gui\duilib\build\debug\uiactivex.obj
-d:\test\addressbook\gui\duilib\build\debug\uibutton.obj
-d:\test\addressbook\gui\duilib\build\debug\uicheckbox.obj
-d:\test\addressbook\gui\duilib\build\debug\uicombo.obj
-d:\test\addressbook\gui\duilib\build\debug\uidatetime.obj
-d:\test\addressbook\gui\duilib\build\debug\uiedit.obj
-d:\test\addressbook\gui\duilib\build\debug\uilabel.obj
-d:\test\addressbook\gui\duilib\build\debug\uilist.obj
-d:\test\addressbook\gui\duilib\build\debug\uioption.obj
-d:\test\addressbook\gui\duilib\build\debug\uiprogress.obj
-d:\test\addressbook\gui\duilib\build\debug\uirichedit.obj
-d:\test\addressbook\gui\duilib\build\debug\uiscrollbar.obj
-d:\test\addressbook\gui\duilib\build\debug\stb_image.obj
-d:\test\addressbook\gui\duilib\build\debug\xunzip.obj
-d:\test\bin\duilib_d.lib
-d:\test\addressbook\gui\duilib\build\debug\duilib.tlog\cl.command.1.tlog
-d:\test\addressbook\gui\duilib\build\debug\duilib.tlog\cl.read.1.tlog
-d:\test\addressbook\gui\duilib\build\debug\duilib.tlog\cl.write.1.tlog
-d:\test\addressbook\gui\duilib\build\debug\duilib.tlog\lib-link.read.1.tlog
-d:\test\addressbook\gui\duilib\build\debug\duilib.tlog\lib-link.write.1.tlog
-d:\test\addressbook\gui\duilib\build\debug\duilib.tlog\lib.command.1.tlog
+\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\duilib.pch
+\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\vc120.pdb
+\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\vc120.idb
+\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\stdafx.obj
+\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\uislider.obj
+\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\uitext.obj
+\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\uitreeview.obj
+\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\uiwebbrowser.obj
+\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\uibase.obj
+\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\uicontainer.obj
+\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\uicontrol.obj
+\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\uidlgbuilder.obj
+\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\uimanager.obj
+\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\uimarkup.obj
+\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\uirender.obj
+\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\uichildlayout.obj
+\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\uihorizontallayout.obj
+\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\uitablayout.obj
+\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\uitilelayout.obj
+\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\uiverticallayout.obj
+\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\uilib.obj
+\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\uidelegate.obj
+\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\utils.obj
+\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\winimplbase.obj
+\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\uiactivex.obj
+\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\uibutton.obj
+\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\uicheckbox.obj
+\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\uicombo.obj
+\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\uidatetime.obj
+\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\uiedit.obj
+\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\uilabel.obj
+\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\uilist.obj
+\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\uioption.obj
+\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\uiprogress.obj
+\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\uirichedit.obj
+\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\uiscrollbar.obj
+\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\stb_image.obj
+\\magi-moonblade\c work\bitbucket\cis422\addressbook\addressbook\gui\duilib\build\debug\xunzip.obj
+d:\[c]proj\bitbucket\addressbook\addressbook\gui\duilib\build\debug\duilib.pch
+d:\[c]proj\bitbucket\addressbook\addressbook\gui\duilib\build\debug\vc120.pdb
+d:\[c]proj\bitbucket\addressbook\addressbook\gui\duilib\build\debug\vc120.idb
+d:\[c]proj\bitbucket\addressbook\addressbook\gui\duilib\build\debug\stdafx.obj
+d:\[c]proj\bitbucket\addressbook\addressbook\gui\duilib\build\debug\uislider.obj
+d:\[c]proj\bitbucket\addressbook\addressbook\gui\duilib\build\debug\uitext.obj
+d:\[c]proj\bitbucket\addressbook\addressbook\gui\duilib\build\debug\uitreeview.obj
+d:\[c]proj\bitbucket\addressbook\addressbook\gui\duilib\build\debug\uiwebbrowser.obj
+d:\[c]proj\bitbucket\addressbook\addressbook\gui\duilib\build\debug\uibase.obj
+d:\[c]proj\bitbucket\addressbook\addressbook\gui\duilib\build\debug\uicontainer.obj
+d:\[c]proj\bitbucket\addressbook\addressbook\gui\duilib\build\debug\uicontrol.obj
+d:\[c]proj\bitbucket\addressbook\addressbook\gui\duilib\build\debug\uidlgbuilder.obj
+d:\[c]proj\bitbucket\addressbook\addressbook\gui\duilib\build\debug\uimanager.obj
+d:\[c]proj\bitbucket\addressbook\addressbook\gui\duilib\build\debug\uimarkup.obj
+d:\[c]proj\bitbucket\addressbook\addressbook\gui\duilib\build\debug\uirender.obj
+d:\[c]proj\bitbucket\addressbook\addressbook\gui\duilib\build\debug\uichildlayout.obj
+d:\[c]proj\bitbucket\addressbook\addressbook\gui\duilib\build\debug\uihorizontallayout.obj
+d:\[c]proj\bitbucket\addressbook\addressbook\gui\duilib\build\debug\uitablayout.obj
+d:\[c]proj\bitbucket\addressbook\addressbook\gui\duilib\build\debug\uitilelayout.obj
+d:\[c]proj\bitbucket\addressbook\addressbook\gui\duilib\build\debug\uiverticallayout.obj
+d:\[c]proj\bitbucket\addressbook\addressbook\gui\duilib\build\debug\uilib.obj
+d:\[c]proj\bitbucket\addressbook\addressbook\gui\duilib\build\debug\uidelegate.obj
+d:\[c]proj\bitbucket\addressbook\addressbook\gui\duilib\build\debug\utils.obj
+d:\[c]proj\bitbucket\addressbook\addressbook\gui\duilib\build\debug\winimplbase.obj
+d:\[c]proj\bitbucket\addressbook\addressbook\gui\duilib\build\debug\uiactivex.obj
+d:\[c]proj\bitbucket\addressbook\addressbook\gui\duilib\build\debug\uibutton.obj
+d:\[c]proj\bitbucket\addressbook\addressbook\gui\duilib\build\debug\uicheckbox.obj
+d:\[c]proj\bitbucket\addressbook\addressbook\gui\duilib\build\debug\uicombo.obj
+d:\[c]proj\bitbucket\addressbook\addressbook\gui\duilib\build\debug\uidatetime.obj
+d:\[c]proj\bitbucket\addressbook\addressbook\gui\duilib\build\debug\uiedit.obj
+d:\[c]proj\bitbucket\addressbook\addressbook\gui\duilib\build\debug\uilabel.obj
+d:\[c]proj\bitbucket\addressbook\addressbook\gui\duilib\build\debug\uilist.obj
+d:\[c]proj\bitbucket\addressbook\addressbook\gui\duilib\build\debug\uioption.obj
+d:\[c]proj\bitbucket\addressbook\addressbook\gui\duilib\build\debug\uiprogress.obj
+d:\[c]proj\bitbucket\addressbook\addressbook\gui\duilib\build\debug\uirichedit.obj
+d:\[c]proj\bitbucket\addressbook\addressbook\gui\duilib\build\debug\uiscrollbar.obj
+d:\[c]proj\bitbucket\addressbook\addressbook\gui\duilib\build\debug\stb_image.obj
+d:\[c]proj\bitbucket\addressbook\addressbook\gui\duilib\build\debug\xunzip.obj
+\\magi-moonblade\c work\bitbucket\cis422\addressbook\bin\duilib_d.lib
+d:\[c]proj\bitbucket\addressbook\bin\duilib_d.lib
+d:\[c]proj\bitbucket\addressbook\addressbook\gui\duilib\build\debug\duilib.tlog\cl.command.1.tlog
+d:\[c]proj\bitbucket\addressbook\addressbook\gui\duilib\build\debug\duilib.tlog\cl.read.1.tlog
+d:\[c]proj\bitbucket\addressbook\addressbook\gui\duilib\build\debug\duilib.tlog\cl.write.1.tlog
+d:\[c]proj\bitbucket\addressbook\addressbook\gui\duilib\build\debug\duilib.tlog\lib-link.read.1.tlog
+d:\[c]proj\bitbucket\addressbook\addressbook\gui\duilib\build\debug\duilib.tlog\lib-link.write.1.tlog
+d:\[c]proj\bitbucket\addressbook\addressbook\gui\duilib\build\debug\duilib.tlog\lib.command.1.tlog

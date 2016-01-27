@@ -144,6 +144,13 @@ public:
 	//return: true if exists, false if not.
 	bool IsTableExist(const string tableName) const;
 
+	//Ouput all the table names
+	//
+	//output:
+	//	out: an array of table names
+	//return: 0 when success, otherwise fail
+	int GetAllTableNames(vector<string> *out) const;
+
 	//Execute a sql statement on the database, all other functions are 
 	//implemented using this function
 	//

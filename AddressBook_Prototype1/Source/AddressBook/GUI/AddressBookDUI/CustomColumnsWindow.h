@@ -1,5 +1,8 @@
+#pragma once
+
 #include "../DuiLib/UIlib.h"
 #include "../../Model/DB/Util.h"
+#include "../../Model/AddressBookModel.h"
 #include <string>
 #include <map>
 #include <iostream>
@@ -29,15 +32,18 @@ public:
 
 	void Notify(TNotifyUI& msg)
 	{
-		if (msg.sType == _T("click")) {
+		if (msg.sType == DUI_MSGTYPE_CLICK) {
 			if (msg.pSender->GetName() == _T("w_close")) { Close(1); return; }
 			else if (msg.pSender->GetName() == _T("btn_ok")) 
 			{
-				m_pRes->push_back("FIRSTNAME");
-				m_pRes->push_back("LASTNAME");
-				m_pRes->push_back("ADDRESS");
-				m_pRes->push_back("ZIP");
-				m_pRes->push_back("PHONE");
+				m_pRes->push_back(FIRSTNAME_HEADER_NAME);
+				m_pRes->push_back(LASTNAME_HEADER_NAME);
+				m_pRes->push_back(ADDRESS1_HEADER_NAME);
+				m_pRes->push_back(ADDRESS2_HEADER_NAME);
+				m_pRes->push_back(CITY_HEADER_NAME);
+				m_pRes->push_back(STATE_HEADER_NAME);
+				m_pRes->push_back(ZIPCODE_HEADER_NAME);
+				m_pRes->push_back(PHONE_HEADER_NAME);
 
 				CEditUI *columns = static_cast<CEditUI *>(m_pm.FindControl("edit_columns"));
 				string buff = columns->GetText();
@@ -158,9 +164,18 @@ public:
 	LRESULT MessageHandler(UINT uMsg, WPARAM wParam, LPARAM lParam, bool& bHandled)
 	{
 		if (uMsg == WM_KEYDOWN) {
-			if (wParam == VK_ESCAPE) {
+			if (wParam == VK_ESCAPE) 
+			{
 				Close(1);
 				return true;
+			}
+			else if (wParam == VK_RETURN)
+			{
+				CButtonUI *pOkbtn = static_cast<CButtonUI *>(m_pm.FindControl("btn_ok"));
+				TNotifyUI msg;
+				msg.sType = DUI_MSGTYPE_CLICK;
+				msg.pSender = pOkbtn;
+				m_pm.SendNotify(msg);
 			}
 		}
 		return false;

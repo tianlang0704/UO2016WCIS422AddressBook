@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Window size="350,120" sizebox="4,4,8,8" caption="0,0,0,30" roundcorner="5, 5" title="123" mininfo="300,300">
+<Window size="320,170" sizebox="4,4,8,8" caption="0,0,0,30" roundcorner="5, 5" title="123" mininfo="300,300">
 	<Font id="0" name="Arial" size="13" />
 	<Default shared="true" name="Button" value="normalimage=&quot;file='button.png' source='0,0,63,23'&quot; hotimage=&quot;file='button.png' source='0,23,63,46'&quot; pushedimage=&quot;file='button.png' source='0,23,63,46'&quot;" />
 	<VerticalLayout bkimage="file='bg.png' corner='10,100,10,10' hole='false'" bkcolor="#FF313C00" inset="3,0,3,0">
 		<HorizontalLayout height="25" padding="0,0,3,20">	<!--Title-->
 			<HorizontalLayout inset="3,4,0,0">	<!--Title Bar -->
-				<Label height="22" text="Input a name to save an address book to" font="1" textcolor="#FFFFFFFF"/>
+				<Label name="label_title" height="22" font="0" textcolor="#FFFFFFFF" />
 			</HorizontalLayout>
 			<HorizontalLayout width="28" inset="0,2,2,0">	<!--Title Buttons -->
 				<Button name="w_close" maxwidth="28" maxheight="17" normalimage="file='max_min.png' source='28,0,56,17'" hotimage="file='max_min_h.png' source='28,0,56,17'" pushedimage="file='max_min_h.png' source='28,0,56,17'"/>
 			</HorizontalLayout>
 		</HorizontalLayout>
-		<HorizontalLayout>
-			<Label text="Address book name:" height="25" padding="10,0,0,0" font="0" />
-			<Edit name="edit_name" height="25" width="200" />
-		</HorizontalLayout>
+		<VerticalLayout height="75" padding="10,0,10,10">
+			<Text name="label_msg"  font="0"/>
+			<Combo name="combo_select" width="250" padding="0,5,0,0" textpadding="5,0,0,0" itemtextpadding="5,0,0,0" itemendellipsis="true" normalimage="file='combo_bg.png' corner='3,3,120,3'" hotimage="file='combo_hot.png' corner='3,3,120,3'" pushedimage="file='combo_pushed.png' corner='3,3,120,3'">
+			
+			</Combo>
+		</VerticalLayout>
 		<HorizontalLayout>
 			<Container />
 			<Button name="btn_ok" text="OK" height="25" width="50" />

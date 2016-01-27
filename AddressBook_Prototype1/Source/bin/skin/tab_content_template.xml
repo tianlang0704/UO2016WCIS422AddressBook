@@ -14,12 +14,14 @@
 					<Container width="10" />
 					<VerticalLayout>
 						<Label name="contact_detail_name" text="" font="3"/> 
-						<Label name="contact_detail_phone" text="" font="2"/>
 						<Text name="contact_detail_address" text="" font="2"/>
 					</VerticalLayout>
 				</HorizontalLayout>
 				<VerticalLayout name="contact_detail_extra">
-						
+					<Label text="Phone:" font="2"/>
+					<Label name="contact_detail_phone" font="1" padding="10,0,0,0"/>
+					<Label text="Address:" font="2"/>
+					<Text name="contact_detail_address_detail" font="1" padding="10,0,0,0"/>
 				</VerticalLayout>
 			</VerticalLayout>
 		 </VerticalLayout>

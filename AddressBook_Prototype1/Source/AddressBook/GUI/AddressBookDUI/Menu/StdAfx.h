@@ -37,6 +37,7 @@
 #include <shlwapi.h>
 #include <list>
 
+#define UILIB_STATIC
 #include "..\..\DuiLib\UIlib.h"
 
 #include "UICrack.h"

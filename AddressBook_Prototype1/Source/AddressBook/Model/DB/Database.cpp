@@ -341,3 +341,19 @@ int Database::PrintTable(string tableName)
 		return 1;
 	return 0;
 }
+
+int Database::GetAllTableNames(vector<string> *out) const
+{
+	vector< map<string, string> > output;
+
+	string str = "SELECT name FROM sqlite_master WHERE type='table' AND name!='sqlite_sequence'";
+
+	int res = Exec(str, &output);
+	if (res)
+		return res;
+
+	for (auto &i : output)
+		out->push_back(i.at("name"));
+	
+	return res;
+}

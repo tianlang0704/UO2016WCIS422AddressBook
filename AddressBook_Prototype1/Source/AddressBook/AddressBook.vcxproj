@@ -28,8 +28,8 @@
     <ClInclude Include="GUI\AddressBookDUI\Menu\StdAfx.h" />
     <ClInclude Include="GUI\AddressBookDUI\Menu\UICrack.h" />
     <ClInclude Include="GUI\AddressBookDUI\Menu\UIMenu.h" />
-    <ClInclude Include="GUI\AddressBookDUI\OpenWindow.h" />
-    <ClInclude Include="GUI\AddressBookDUI\SaveWindow.h" />
+    <ClInclude Include="GUI\AddressBookDUI\OneInputWindow.h" />
+    <ClInclude Include="GUI\AddressBookDUI\OneDropdownWindow.h" />
     <ClInclude Include="Model\AddressBookModel.h" />
     <ClInclude Include="Model\DB\Database.h" />
     <ClInclude Include="Model\DB\sqlite\sqlite3.h" />

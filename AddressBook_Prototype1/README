@@ -1,5 +1,13 @@
 AddressBook_Prototype1
 
-*Very very very basic functionalities(very early alpha?)
 *Almost no input check
-*Need to add more UI elements
+
+
+Updates
+
+2016-01-26(L1)
+Modified: Press enter to submit input in pop up dialogs
+Modified: Pre-filled edit window
+Modified: Dropdown select to open address book
+fixed: Custom column prompt when opening new address book.
+Added: Sort by lastname / Sort by Zip code

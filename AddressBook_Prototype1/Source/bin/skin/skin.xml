@@ -8,9 +8,11 @@
 	<Default shared="true" name="Button" value="normalimage=&quot;file='button.png' source='0,0,63,23'&quot; hotimage=&quot;file='button.png' source='0,23,63,46'&quot; pushedimage=&quot;file='button.png' source='0,23,63,46'&quot;" />
 	<VerticalLayout bkimage="file='bg.png' corner='10,100,10,10' hole='false'" bkcolor="#FF313C00">
 		<HorizontalLayout height="25" padding="0,0,5,0">	<!--Title-->
-			<Container float="true" height="50" width="50" inset="1,3,0,0"><Text text="ICON" font="0"/></Container>
-			<HorizontalLayout inset="50,5,0,0">	<!--Title Bar -->
-				<Label height="22" text="Duck Duck Goose Contact Manager" font="1" />
+			<Container float="true" height="25" width="25" inset="1,3,0,0">
+				<Control height="20" width="20" bkimage="duck.png" />
+			</Container>
+			<HorizontalLayout inset="30,5,0,0">	<!--Title Bar -->
+				<Label height="22" text="Duck Duck Goose Contact Manager" font="1" textcolor="FFFFFFFF" />
 			</HorizontalLayout>
 			<HorizontalLayout width="56" inset="0,2,2,0">	<!--Title Buttons -->
 				<Button name="w_min" maxwidth="28" maxheight="17" normalimage="file='max_min.png' source='0,0,28,17'" hotimage="file='max_min_h.png' source='0,0,28,17'" pushedimage="file='max_min_h.png' source='0,0,28,17'"/>

@@ -1,13 +1,15 @@
+#pragma once
+
 #include "../DuiLib/UIlib.h"
 #include <string>
 
 using namespace std;
 using namespace DuiLib;
 
-class OpenWindow : public CWindowWnd, public INotifyUI, public IMessageFilterUI
+class OneInputWindow : public CWindowWnd, public INotifyUI, public IMessageFilterUI
 {
 public:
-	OpenWindow(string *res) { m_pRes = res; };
+	OneInputWindow(string *res, string msg, string title) { m_pRes = res; m_Msg = msg; m_Title = title; };
 	LPCTSTR GetWindowClassName() const { return _T("UIPopupFrame"); };
 	UINT GetClassStyle() const { return UI_CLASSSTYLE_DIALOG; };
 	void OnFinalMessage(HWND /*hWnd*/)
@@ -17,9 +19,21 @@ public:
 	};
 
 	void Init() {
-		CEditUI* pNameEdit = static_cast<CEditUI*>(m_pm.FindControl(_T("edit_name")));
-		if (pNameEdit)
-			pNameEdit->SetFocus();
+		CEditUI* pInputEdit = static_cast<CEditUI*>(m_pm.FindControl(_T("edit_input")));
+		if (pInputEdit)
+		{
+			pInputEdit->SetText(m_pRes->c_str());
+			pInputEdit->SetFocus();
+		}
+
+		CLabelUI* pTitleLabel = static_cast<CLabelUI*>(m_pm.FindControl(_T("label_title")));
+		if (pTitleLabel)
+			pTitleLabel->SetText(m_Title.c_str());
+
+		CLabelUI* pMsgLabel = static_cast<CLabelUI*>(m_pm.FindControl(_T("label_msg")));
+		if (pMsgLabel)
+			pMsgLabel->SetText(m_Msg.c_str());
+
 	}
 
 	void Notify(TNotifyUI& msg)
@@ -28,8 +42,8 @@ public:
 			if (msg.pSender->GetName() == _T("w_close")) { Close(1); return; }
 			else if (msg.pSender->GetName() == _T("btn_ok")) 
 			{
-				CEditUI* pNameEdit = static_cast<CEditUI*>(m_pm.FindControl(_T("edit_name")));
-				(*m_pRes) = pNameEdit->GetText();
+				CEditUI* pInputEdit = static_cast<CEditUI*>(m_pm.FindControl(_T("edit_input")));
+				(*m_pRes) = pInputEdit->GetText();
 				Close(0); 
 				return; 
 			}
@@ -45,7 +59,7 @@ public:
 		m_pm.Init(m_hWnd);
 		m_pm.AddPreMessageFilter(this);
 		CDialogBuilder builder;
-		CControlUI* pRoot = builder.Create(_T("open.xml"), NULL, (UINT)0, &m_pm);
+		CControlUI* pRoot = builder.Create(_T("one_input.xml"), NULL, (UINT)0, &m_pm);
 		ASSERT(pRoot && "Failed to parse XML");
 		m_pm.AttachDialog(pRoot);
 		m_pm.AddNotifier(this);
@@ -128,13 +142,18 @@ public:
 	LRESULT MessageHandler(UINT uMsg, WPARAM wParam, LPARAM lParam, bool& bHandled)
 	{
 		if (uMsg == WM_KEYDOWN) {
-			if (wParam == VK_RETURN) {
-				CEditUI* pEdit = static_cast<CEditUI*>(m_pm.FindControl(_T("edit_name")));
-				if (pEdit->GetText().IsEmpty()) pEdit->SetFocus();
+			if (wParam == VK_RETURN)
+			{
+				CButtonUI *pOkbtn = static_cast<CButtonUI *>(m_pm.FindControl("btn_ok"));
+				TNotifyUI msg;
+				msg.sType = DUI_MSGTYPE_CLICK;
+				msg.pSender = pOkbtn;
+				m_pm.SendNotify(msg);
 
 				return true;
 			}
-			else if (wParam == VK_ESCAPE) {
+			else if (wParam == VK_ESCAPE) 
+			{
 				Close(1);
 				return true;
 			}
@@ -145,4 +164,5 @@ public:
 public:
 	CPaintManagerUI m_pm;
 	string *m_pRes;
+	string m_Msg, m_Title;
 };

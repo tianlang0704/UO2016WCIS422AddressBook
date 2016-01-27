@@ -1,9 +1,9 @@
 #include "AddressBookWindow.h"
-#include "OpenWindow.h"
-#include "SaveWindow.h"
+#include "OneInputWindow.h"
+#include "OneDropdownWindow.h"
 #include "EditWindow.h"
 #include "CustomColumnsWindow.h"
-
+#include "../../Model/AddressBookModel.h"
 
 #define CON_LIST_ID "ContactListMember"
 
@@ -51,7 +51,7 @@ void AddressBookWindow::Notify(TNotifyUI& msg)
 	}
 	else if (msg.sType == DUI_MSGTYPE_ITEMCLICK)
 	{
-		
+
 		if (msg.pSender->GetName() == "menu_btn_open")
 			Open();
 		else if (msg.pSender->GetName() == "menu_btn_new")
@@ -62,13 +62,23 @@ void AddressBookWindow::Notify(TNotifyUI& msg)
 			RemoveTab();
 		else if (msg.pSender->GetName() == "menu_btn_save")
 			Save();
+		else if (msg.pSender->GetName() == "menu_btn_exit")
+			Exit();
+		else if (msg.pSender->GetName() == "menu_btn_export")
+			Export();
+		else if (msg.pSender->GetName() == "menu_btn_export")
+			Import();
+		else if (msg.pSender->GetName() == "menu_btn_sort_zip")
+			Sort(ZIPCODE_HEADER_NAME);
+		else if (msg.pSender->GetName() == "menu_btn_sort_lastname")
+			Sort(LASTNAME_HEADER_NAME);
 		else if (msg.pSender->GetUserData() == CON_LIST_ID)
 			OnContactListSelect(msg);
 	}
 	else if (msg.sType == DUI_MSGTYPE_CLICK)
 	{
 		if (msg.pSender->GetName() == "w_close")
-			this->Close();
+			Exit();
 		else if (msg.pSender->GetName() == "btn_file")
 			OpenMenu(CDuiPoint(msg.pSender->GetPos().left, msg.pSender->GetPos().bottom), "menu_file.xml");
 		else if (msg.pSender->GetName() == "btn_edit")
@@ -118,13 +128,15 @@ void AddressBookWindow::OnContactListActivate(TNotifyUI &msg)
 void AddressBookWindow::Edit(int index)
 {
 	map<string, string> res;
+	AddressBookModel *addressBook = m_TabContexts[m_currentTabIndex].pAddressBook;
+	addressBook->GetContact(index, &res);
+
 	EditWindow* pEditName = new EditWindow(&res);
 	pEditName->Create(m_hWnd, _T(""), UI_WNDSTYLE_DIALOG, 0, 0, 0, 0, 0, NULL);
 	pEditName->CenterWindow();
 	if (pEditName->ShowModal())
 		return;
 
-	AddressBookModel *addressBook = m_TabContexts[m_currentTabIndex].pAddressBook;
 	addressBook->UpdateContact(index, res);
 
 	UpdateContactList();
@@ -141,13 +153,16 @@ void AddressBookWindow::OpenMenu(CDuiPoint p, STRINGorID fileName)
 
 void AddressBookWindow::Open()
 {
+	vector<string> names;
+	AddressBookModel::GetAllAddressBookNames(&names);
+
 	string res;
-	OpenWindow* pOpen = new OpenWindow(&res);
+	OneDropdownWindow* pOpen = new OneDropdownWindow(&res, "Address book name: ", "Input a name to open an address book", names);
 	pOpen->Create(m_hWnd, _T(""), UI_WNDSTYLE_DIALOG, 0, 0, 0, 0, 0, NULL);
 	pOpen->CenterWindow();
 	if (pOpen->ShowModal())
 		return;
-	
+
 	AddressBookModel *addressBook = new AddressBookModel();
 	if (addressBook->Open(res))
 	{
@@ -166,7 +181,7 @@ void AddressBookWindow::Save()
 
 	AddressBookModel *addressBook = m_TabContexts[m_currentTabIndex].pAddressBook;
 	string name = addressBook->GetName();
-	SaveWindow* pSave = new SaveWindow(&name);
+	OneInputWindow* pSave = new OneInputWindow(&name, "Address book name:\n  1.Must start with a letter\n  2.Must not contain space ", "Input a name to save an address book to");
 	pSave->Create(m_hWnd, _T(""), UI_WNDSTYLE_DIALOG, 0, 0, 0, 0, 0, NULL);
 	pSave->CenterWindow();
 	if (pSave->ShowModal())
@@ -180,12 +195,49 @@ void AddressBookWindow::Save()
 		if (MessageBox(NULL, msg.c_str(), "Warning!", MB_OKCANCEL) != 1)
 			return;
 	}
-	
-	if (addressBook->Save())
-		MessageBox(NULL, "Failed saving address book", "Warning!", MB_OK);
 
-	 COptionUI *tab = static_cast<COptionUI *>(m_TabBar->GetItemAt(m_currentTabIndex));
-	 tab->SetText(name.c_str());
+	if (addressBook->Save())
+	{
+		MessageBox(NULL, "Failed saving address book", "Warning!", MB_OK);
+		return;
+	}
+
+	COptionUI *tab = static_cast<COptionUI *>(m_TabBar->GetItemAt(m_currentTabIndex));
+	tab->SetText(name.c_str());
+}
+
+void AddressBookWindow::CheckUnsave()
+{
+
+
+}
+
+void AddressBookWindow::Exit()
+{
+	CheckUnsave();
+	this->Close();
+}
+
+void AddressBookWindow::Export()
+{
+
+
+
+}
+
+void AddressBookWindow::Import()
+{
+
+
+
+}
+
+void AddressBookWindow::Sort(string header)
+{
+	AddressBookModel *addressBook = m_TabContexts[m_currentTabIndex].pAddressBook;
+	addressBook->SortBy(header);
+
+	UpdateContactList();
 }
 
 void AddressBookWindow::ShowDetail(int index)
@@ -197,36 +249,54 @@ void AddressBookWindow::ShowDetail(int index)
 		return;
 
 	CLabelUI *name = static_cast<CLabelUI *>(pTabContent->FindSubControl("contact_detail_name"));
+	CTextUI *address = static_cast<CTextUI *>(pTabContent->FindSubControl("contact_detail_address"));
 	CLabelUI *phone = static_cast<CLabelUI *>(pTabContent->FindSubControl("contact_detail_phone"));
-	CLabelUI *address = static_cast<CLabelUI *>(pTabContent->FindSubControl("contact_detail_address"));
+	CTextUI *addressDetail = static_cast<CTextUI *>(pTabContent->FindSubControl("contact_detail_address_detail"));
+	
 
-	string nameStr = "", phoneStr = "", addressStr = "";
+	string nameStr = "", phoneStr = "", addressStr = "", addresDetailStr = "";
 
 
 	map<string, string> entry = addressBook->GetData()[index];
-	auto it = entry.find("FIRSTNAME");
+	auto it = entry.find(FIRSTNAME_HEADER_NAME);
 	if (it != entry.end())
 		nameStr += (*it).second;
 
-	it = entry.find("LASTNAME");
+	it = entry.find(LASTNAME_HEADER_NAME);
 	if (it != entry.end())
 		nameStr += " " + (*it).second;
 
-	it = entry.find("PHONE");
+	it = entry.find(PHONE_HEADER_NAME);
 	if (it != entry.end())
 		phoneStr += (*it).second;
 
-	it = entry.find("ADDRESS");
+	it = entry.find(ADDRESS1_HEADER_NAME);
 	if (it != entry.end())
+	{
 		addressStr += (*it).second;
+		addresDetailStr += (*it).second;
+	}
 
-	it = entry.find("ZIP");
+	it = entry.find(ADDRESS2_HEADER_NAME);
 	if (it != entry.end())
-		addressStr += " " + (*it).second;
+		addresDetailStr += "\n" + (*it).second;
+
+	it = entry.find(CITY_HEADER_NAME);
+	if (it != entry.end())
+		addresDetailStr += "\n" + (*it).second;
+
+	it = entry.find(STATE_HEADER_NAME);
+	if (it != entry.end())
+		addresDetailStr += " " + (*it).second;
+
+	it = entry.find(ZIPCODE_HEADER_NAME);
+	if (it != entry.end())
+		addresDetailStr += " " + (*it).second;
 
 	name->SetText(nameStr.c_str());
 	phone->SetText(phoneStr.c_str());
 	address->SetText(addressStr.c_str());
+	addressDetail->SetText(addresDetailStr.c_str());
 }
 
 void AddressBookWindow::UpdateContactList()
@@ -250,23 +320,29 @@ void AddressBookWindow::UpdateContactList()
 
 		CLabelUI *name = static_cast<CLabelUI *>(newContact->FindSubControl("list_content_name"));
 		CLabelUI *phone = static_cast<CLabelUI *>(newContact->FindSubControl("list_content_phone"));
+		CLabelUI *zip = static_cast<CLabelUI *>(newContact->FindSubControl("list_content_zipcode"));
 
-		string nameStr = "", phoneStr = "";
+		string nameStr = "", phoneStr = "", zipStr = "";
 
-		auto it = i.find("FIRSTNAME");
+		auto it = i.find(FIRSTNAME_HEADER_NAME);
 		if (it != i.end())
 			nameStr += (*it).second;
 
-		it = i.find("LASTNAME");
+		it = i.find(LASTNAME_HEADER_NAME);
 		if (it != i.end())
 			nameStr += " " + (*it).second;
 
-		it = i.find("PHONE");
+		it = i.find(PHONE_HEADER_NAME);
 		if (it != i.end())
 			phoneStr += (*it).second;
 
+		it = i.find(ZIPCODE_HEADER_NAME);
+		if (it != i.end())
+			zipStr += (*it).second;
+
 		name->SetText(nameStr.c_str());
 		phone->SetText(phoneStr.c_str());
+		zip->SetText(zipStr.c_str());
 
 		contactList->Add(newContact);
 	}
@@ -274,16 +350,23 @@ void AddressBookWindow::UpdateContactList()
 
 void AddressBookWindow::AddTab(AddressBookModel *ad)
 {
-	vector<string> res;
-	CustomColumnsWindow* pCosCal = new CustomColumnsWindow(&res);
-	pCosCal->Create(m_hWnd, _T(""), UI_WNDSTYLE_DIALOG, 0, 0, 0, 0, 0, NULL);
-	pCosCal->CenterWindow();
-	if (pCosCal->ShowModal())
-		return;
-
-	AddressBookModel  *newAD = (ad == NULL) ? new AddressBookModel(res) : ad;
+	AddressBookModel  *newAD;
 	if (ad == NULL)
+	{
+		vector<string> res;
+		CustomColumnsWindow* pCosCal = new CustomColumnsWindow(&res);
+		pCosCal->Create(m_hWnd, _T(""), UI_WNDSTYLE_DIALOG, 0, 0, 0, 0, 0, NULL);
+		pCosCal->CenterWindow();
+		if (pCosCal->ShowModal())
+			return;
+
+		newAD = new AddressBookModel(res);
 		newAD->SetName("Untitled");
+	}
+	else
+	{
+		newAD = ad;
+	}	
 
 	CDialogBuilder builder;
 	COptionUI *newTab = static_cast<COptionUI *>(builder.Create(m_TabTemplate.c_str(), NULL, (UINT)0, &m_PaintManager));
@@ -321,7 +404,7 @@ void AddressBookWindow::RemoveTab()
 	if ((*it).pAddressBook != NULL)
 		delete (*it).pAddressBook;
 	m_TabContexts.erase(it);
-	
+
 	if (m_TabContexts.size() <= 0)
 		return;
 
@@ -344,6 +427,7 @@ void AddressBookWindow::AddContact()
 
 void AddressBookWindow::Prepare()
 {
+
 	//List
 	CListUI *ContactList = static_cast<CListUI*>(m_PaintManager.FindControl(_T("contact_list")));
 	if (ContactList != NULL)

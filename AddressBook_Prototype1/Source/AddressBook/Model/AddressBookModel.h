@@ -1,11 +1,18 @@
+#ifndef CIS422_ADDRESSBOOKMODEL_H
+#define CIS422_ADDRESSBOOKMODEL_H
+
 #include "DB/Database.h"
 #include <string>
 #include <vector>
 #include <map>
 #include <algorithm>
+#include <fstream>
 
 #define DATA_FILE_NAME "data.db"
-#define ADDRESS_HEADER_NAME "ADDRESS"
+#define ADDRESS1_HEADER_NAME "ADDRESS1"
+#define ADDRESS2_HEADER_NAME "ADDRESS2"
+#define CITY_HEADER_NAME "CITY"
+#define STATE_HEADER_NAME "STATE"
 #define FIRSTNAME_HEADER_NAME "FIRSTNAME"
 #define LASTNAME_HEADER_NAME "LASTNAME"
 #define ZIPCODE_HEADER_NAME "ZIP"
@@ -21,6 +28,8 @@ public:
 	AddressBookModel();
 	~AddressBookModel();
 
+	static int GetAllAddressBookNames(vector<string> *out);
+
 	int Open(const string addresBookName);
 	int Search(const string str);
 	int Save();
@@ -35,7 +44,6 @@ public:
 
 	int Import(const string fileName);
 	int Export(const string fileName) const;
-
 
 	void SetHeaders(vector<string> headers);
 	void GetHeaders(vector<string> headers);
@@ -62,3 +70,5 @@ private:
 	string m_FieldName;
 	bool m_bASC;
 };
+
+#endif //CIS422_ADDRESSBOOKMODEL_H

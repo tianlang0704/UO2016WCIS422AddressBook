@@ -1,3 +1,5 @@
+#pragma once
+
 #include "../DuiLib/UIlib.h"
 #include <string>
 #include <map>
@@ -21,6 +23,39 @@ public:
 		CEditUI* pNameEdit = static_cast<CEditUI*>(m_pm.FindControl(_T("edit_firstname")));
 		if (pNameEdit)
 			pNameEdit->SetFocus();
+
+		m_pFirstname = static_cast<CEditUI *>(m_pm.FindControl("edit_firstname"));
+		m_pMiddlename = static_cast<CEditUI *>(m_pm.FindControl("edit_middlename"));
+		m_pLastname = static_cast<CEditUI *>(m_pm.FindControl("edit_lastname"));
+
+		m_pPhone = static_cast<CEditUI *>(m_pm.FindControl("edit_tel"));
+
+		m_pAddress1 = static_cast<CEditUI *>(m_pm.FindControl("edit_address1"));
+		m_pAddress2 = static_cast<CEditUI *>(m_pm.FindControl("edit_address2"));
+
+		m_pCity = static_cast<CEditUI *>(m_pm.FindControl("edit_city"));
+		m_pState = static_cast<CEditUI *>(m_pm.FindControl("edit_state"));
+		m_pZip = static_cast<CEditUI *>(m_pm.FindControl("edit_zip"));
+
+
+		if (m_pFirstname)
+			m_pFirstname->SetText((*m_pRes)[FIRSTNAME_HEADER_NAME].c_str());
+		//if (m_pMiddlename)
+		//m_pMiddlename->SetText(m_pRes->at(MIDDLENAME_HEADER_NAME).c_str());
+		if (m_pLastname)
+			m_pLastname->SetText((*m_pRes)[LASTNAME_HEADER_NAME].c_str());
+		if (m_pPhone)
+			m_pPhone->SetText((*m_pRes)[PHONE_HEADER_NAME].c_str());
+		if (m_pAddress1)
+			m_pAddress1->SetText((*m_pRes)[ADDRESS1_HEADER_NAME].c_str());
+		if (m_pAddress2)
+			m_pAddress2->SetText((*m_pRes)[ADDRESS2_HEADER_NAME].c_str());
+		if (m_pCity)
+			m_pCity->SetText((*m_pRes)[CITY_HEADER_NAME].c_str());
+		if (m_pState)
+			m_pState->SetText((*m_pRes)[STATE_HEADER_NAME].c_str());
+		if (m_pZip)
+			m_pZip->SetText((*m_pRes)[ZIPCODE_HEADER_NAME].c_str());
 	}
 
 	void Notify(TNotifyUI& msg)
@@ -30,37 +65,27 @@ public:
 			else if (msg.pSender->GetName() == _T("btn_cancel")) { Close(1); return; }
 			else if (msg.pSender->GetName() == _T("btn_ok")) 
 			{
-				CEditUI *firstname = static_cast<CEditUI *>(m_pm.FindControl("edit_firstname"));
-				CEditUI *middlename = static_cast<CEditUI *>(m_pm.FindControl("edit_middlename"));
-				CEditUI *lastname = static_cast<CEditUI *>(m_pm.FindControl("edit_lastname"));
-
-				CEditUI *phone = static_cast<CEditUI *>(m_pm.FindControl("edit_tel"));
-
-				CEditUI *address1 = static_cast<CEditUI *>(m_pm.FindControl("edit_address1"));
-				CEditUI *address2 = static_cast<CEditUI *>(m_pm.FindControl("edit_address2"));
-
-				CEditUI *city = static_cast<CEditUI *>(m_pm.FindControl("edit_city"));
-				CEditUI *state = static_cast<CEditUI *>(m_pm.FindControl("edit_state"));
-				CEditUI *zip = static_cast<CEditUI *>(m_pm.FindControl("edit_zip"));
-
-				string addressStr = "";
-				addressStr.append(address1->GetText().GetData());
-				addressStr.append(" ");
-				addressStr.append(address2->GetText().GetData());
-				addressStr.append(" ");
-				addressStr.append(city->GetText().GetData());
-				addressStr.append(" ");
-				addressStr.append(state->GetText().GetData());
-
-				m_pRes->insert(pair<string, string>("FIRSTNAME", firstname->GetText().GetData()));
-				//m_pRes->insert(pair<string, string>("MIDDLENAME", middlename->GetText().GetData()));
-				m_pRes->insert(pair<string, string>("LASTNAME", lastname->GetText().GetData()));
-				m_pRes->insert(pair<string, string>("PHONE", phone->GetText().GetData()));
-				m_pRes->insert(pair<string, string>("ADDRESS", addressStr));
-				m_pRes->insert(pair<string, string>("ZIP", zip->GetText().GetData()));
+				if (m_pFirstname)
+					(*m_pRes)[FIRSTNAME_HEADER_NAME] = m_pFirstname->GetText().GetData();
+				//if (m_pMiddlename)
+					//(*m_pRes)[MIDDLENAME_HEADER_NAME] = m_pMiddlename->GetText().GetData();
+				if (m_pLastname)
+					(*m_pRes)[LASTNAME_HEADER_NAME] = m_pLastname->GetText().GetData();
+				if (m_pPhone)
+					(*m_pRes)[PHONE_HEADER_NAME] = m_pPhone->GetText().GetData();
+				if (m_pAddress1)
+					(*m_pRes)[ADDRESS1_HEADER_NAME] = m_pAddress1->GetText().GetData();
+				if (m_pAddress2)
+					(*m_pRes)[ADDRESS2_HEADER_NAME] = m_pAddress2->GetText().GetData();
+				if (m_pCity)
+					(*m_pRes)[CITY_HEADER_NAME] = m_pCity->GetText().GetData();
+				if (m_pState)
+					(*m_pRes)[STATE_HEADER_NAME] = m_pState->GetText().GetData();
+				if (m_pZip)
+					(*m_pRes)[ZIPCODE_HEADER_NAME] = m_pZip->GetText().GetData();
 				
-				Close(0); 
-				return; 
+				Close(0);
+				return;
 			}
 		}
 	}
@@ -167,5 +192,20 @@ public:
 
 public:
 	CPaintManagerUI m_pm;
+	
+private:
 	map<string, string> *m_pRes;
+
+	CEditUI *m_pFirstname;
+	CEditUI *m_pMiddlename;
+	CEditUI *m_pLastname;
+
+	CEditUI *m_pPhone;
+
+	CEditUI *m_pAddress1;
+	CEditUI *m_pAddress2;
+
+	CEditUI *m_pCity;
+	CEditUI *m_pState;
+	CEditUI *m_pZip;
 };

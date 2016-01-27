@@ -24,6 +24,13 @@ AddressBookModel::~AddressBookModel()
 
 }
 
+int AddressBookModel::GetAllAddressBookNames(vector<string> *out)
+{
+	Database db(DATA_FILE_NAME);
+
+	return db.GetAllTableNames(out);
+}
+
 int AddressBookModel::Open(const string addresBookName)
 {
 	Database db(DATA_FILE_NAME);
@@ -132,13 +139,30 @@ void AddressBookModel::SortBy(const string fieldName, bool bASC)
 //
 //}
 //
-//int AddressBookModel::Export(string fileName)
-//{
-//
-//
-//
-//
-//}
+
+int AddressBookModel::Export(string fileName) const
+{
+	ofstream of(fileName);
+
+	if (!of.is_open())
+		return 1;
+
+	for (auto &i : m_Headers)
+		of << i << "/t";
+	of << endl;
+
+	for (auto &i : m_ContactInfoList)
+	{
+		for (auto &j : i)
+		{
+			of << j.second << "/t";
+		}
+
+		of << endl;
+	}
+
+	return 0;
+}
 
 void AddressBookModel::SetName(string name)
 {

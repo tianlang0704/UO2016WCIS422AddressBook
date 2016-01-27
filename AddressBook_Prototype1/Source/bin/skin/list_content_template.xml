@@ -7,6 +7,7 @@
 		<VerticalLayout>
 			<Label name="list_content_name" text="" /> 
 			<Label name="list_content_phone" text="" />
+			<Label name="list_content_zipcode" text="" />
 		</VerticalLayout>
 	</HorizontalLayout>
 </ListContainerElement>

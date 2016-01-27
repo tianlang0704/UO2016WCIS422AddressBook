@@ -1,4 +1,4 @@
-#pragma 
+#pragma once
 #define UILIB_STATIC
 #include "..\DuiLib\UIlib.h"
 #include "Menu\UIMenu.h"
@@ -65,7 +65,11 @@ private:
 	void UpdateContactList();
 	void Open();
 	void Save();
-	
+	void CheckUnsave();
+	void Exit();
+	void Export();
+	void Import();
+	void Sort(string header);
 
 	void OnTabSelect(TNotifyUI &msg);
 	void OnContactListSelect(TNotifyUI &msg);
