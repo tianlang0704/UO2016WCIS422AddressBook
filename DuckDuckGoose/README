@@ -6,6 +6,9 @@ In progress:
 fix: Black out un-usable menu options (Andrew)
 
 Updates
+2016-01-29
+*fixed: Menubar->Help changed to Menubar->About
+
 2016-01-28
 *Added: Help page
 *Added: Deletion/Edit menu (Micah)

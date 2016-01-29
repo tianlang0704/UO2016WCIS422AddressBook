@@ -25,7 +25,7 @@
 				<button name="btn_file" text="File" height="22" width="40" normalimage="" hotimage="menu_hot_bk.png" pushedimage="" />
 				<button name="btn_edit" text="Edit" height="22" width="40" normalimage="" hotimage="menu_hot_bk.png" pushedimage="" />
 				<button name="btn_view" text="View" height="22" width="40" normalimage="" hotimage="menu_hot_bk.png" pushedimage="" />
-				<button name="btn_help" text="Help" height="22" width="40" normalimage="" hotimage="menu_hot_bk.png" pushedimage="" />
+				<button name="btn_help" text="About" height="22" width="40" normalimage="" hotimage="menu_hot_bk.png" pushedimage="" />
 			</HorizontalLayout>
 		</HorizontalLayout>
 		<Container height="8" />
