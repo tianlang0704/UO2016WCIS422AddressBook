@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window size="400,400" sizebox="4,4,8,8" caption="0,0,0,30" roundcorner="5, 5" title="123" mininfo="300,300">
+	<Font id="0" name="Arial" size="13" />
+	<Include source="scrollbar.xml" />
+	<Default shared="true" name="Button" value="normalimage=&quot;file='button.png' source='0,0,63,23'&quot; hotimage=&quot;file='button.png' source='0,23,63,46'&quot; pushedimage=&quot;file='button.png' source='0,46,63,69'&quot;" />
+	<Default name="Edit" value="bordercolor=&quot;#C6CFD8&quot;  textcolor=&quot;#FF4422AA&quot; bkimage=&quot;file='search_bg.png' source='0,0,258,23' corner='1,1,1,1'&quot; focusbordercolor=&quot;#CC7878&quot; bordersize=&quot;1&quot; borderround=&quot;2,2&quot;" />
+	<VerticalLayout bkimage="file='bg.png' corner='10,100,10,10' hole='false'" bkcolor="#FF313C00" inset="3,0,3,0" >
+		<HorizontalLayout height="25" padding="0,0,3,5">	<!--Title-->
+			<HorizontalLayout inset="3,4,0,0">	<!--Title Bar -->
+				<Label height="22" text="Imput fields to add contacts" font="1" textcolor="#FFFFFFFF"/>
+			</HorizontalLayout>
+			<HorizontalLayout width="28" inset="0,2,2,0">	<!--Title Buttons -->
+				<Button name="w_close" maxwidth="28" maxheight="17" normalimage="file='max_min.png' source='28,0,56,17'" hotimage="file='max_min_h.png' source='28,0,56,17'" pushedimage="file='max_min_h.png' source='28,0,56,17'"/>
+			</HorizontalLayout>
+		</HorizontalLayout>
+		<VerticalLayout height="320" vscrollbar="true"><!--Edit Field Container-->
+			<HorizontalLayout height="60" padding="5,0,0,15" childpadding="10,0,10,0">
+				<VerticalLayout width="120">
+					<Label text="First name" height="25" font="0" />
+					<Edit name="edit_firstname" height="25" />
+				</VerticalLayout>
+				<VerticalLayout width="120">
+					<Label text="Middle Name/Initial" height="25" font="0" />
+					<Edit name="edit_middlename" height="25" />
+				</VerticalLayout>
+				<VerticalLayout width="120">
+					<Label text="Last name" height="25" font="0" />
+					<Edit name="edit_lastname" height="25" />
+				</VerticalLayout>
+			</HorizontalLayout>
+			<HorizontalLayout height="30" padding="5,0,0,15" childpadding="10,0,10,0">
+				<Label text="TEL " height="25" width="50" font="0" />
+				<Edit name="edit_tel" height="25" width="160"/>
+			</HorizontalLayout>
+			<HorizontalLayout height="30" padding="5,0,0,15" childpadding="10,0,10,0">
+				<Label text="Delivery " height="25" width="50" font="0" />
+				<Edit name="edit_address1" height="25" />
+			</HorizontalLayout>
+			<HorizontalLayout height="30" padding="5,0,0,15" childpadding="10,0,10,0">
+				<Label text="Second " height="25" width="50" font="0" />
+				<Edit name="edit_address2" height="25" />
+			</HorizontalLayout>
+			<HorizontalLayout height="70" padding="50,0,0,0" childpadding="10,0,10,0">
+				<VerticalLayout>
+					<Label text="City" height="25" font="0" />
+					<Edit name="edit_city" height="25" />
+				</VerticalLayout>
+				<VerticalLayout>
+					<Label text="State" height="25" font="0" />
+					<Edit name="edit_state" height="25" />
+				</VerticalLayout>
+				<VerticalLayout>
+					<Label text="Zip Code" height="25" font="0" />
+					<Edit name="edit_zip" height="25" />
+				</VerticalLayout>
+			</HorizontalLayout>
+			<VerticalLayout name="custom_field_container">
+			</VerticalLayout>
+		</VerticalLayout>
+		<HorizontalLayout>
+			<Container />
+			<Button name="btn_ok" text="OK" height="25" width="50" />
+			<Container width="10" />
+			<Button name="btn_cancel" text="Cancel" height="25" width="50" />
+			<Container width="10" />
+		</HorizontalLayout>
+	</VerticalLayout>
+</Window>

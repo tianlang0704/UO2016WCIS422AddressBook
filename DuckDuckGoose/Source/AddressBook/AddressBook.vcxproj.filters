@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="GUI">
+      <UniqueIdentifier>{52d02377-ac2a-40c4-83de-53fdea5e6230}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\Menu">
+      <UniqueIdentifier>{b8ad919e-3767-4efa-a244-3012d3a56cab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Model">
+      <UniqueIdentifier>{66d7f58b-6083-4bbd-9abe-4ed9600ebf4a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Model\DB">
+      <UniqueIdentifier>{3683aaa3-b5a9-4aef-a805-55c8f0f1ae41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Model\DB\sqlite">
+      <UniqueIdentifier>{f902e0ad-13df-458b-926a-739d1715a4cb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="GUI\AddressBookDUI\AddressBookWindow.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="GUI\AddressBookDUI\Menu\UICrack.cpp">
+      <Filter>GUI\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="GUI\AddressBookDUI\Menu\UIMenu.cpp">
+      <Filter>GUI\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\AddressBookModel.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\DB\Database.cpp">
+      <Filter>Model\DB</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\DB\Util.cpp">
+      <Filter>Model\DB</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\DB\sqlite\sqlite3.c">
+      <Filter>Model\DB\sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="Source.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GUI\AddressBookDUI\AddressBookWindow.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\AddressBookDUI\Menu\observer_impl_base.hpp">
+      <Filter>GUI\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\AddressBookDUI\Menu\StdAfx.h">
+      <Filter>GUI\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\AddressBookDUI\Menu\UICrack.h">
+      <Filter>GUI\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\AddressBookDUI\Menu\UIMenu.h">
+      <Filter>GUI\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\AddressBookModel.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\DB\Database.h">
+      <Filter>Model\DB</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\DB\Util.h">
+      <Filter>Model\DB</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\DB\sqlite\sqlite3.h">
+      <Filter>Model\DB\sqlite</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\AddressBookDUI\CustomColumnsWindow.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\AddressBookDUI\EditWindow.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\AddressBookDUI\OneInputWindow.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\AddressBookDUI\OneDropdownWindow.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\AddressBookDUI\HelpWindow.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="AddressBook.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\bin\skin.zip" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="icon1.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

@@ -15,7 +15,7 @@ using namespace DuiLib;
 class CustomColumnsWindow : public CWindowWnd, public INotifyUI, public IMessageFilterUI
 {
 public:
-	CustomColumnsWindow(vector<string> *res) { m_pRes = res; };
+	CustomColumnsWindow(vector<string> *res, string *res2) { m_pRes = res; m_pRes2 = res2; };
 	LPCTSTR GetWindowClassName() const { return _T("UIPopupFrame"); };
 	UINT GetClassStyle() const { return UI_CLASSSTYLE_DIALOG; };
 	void OnFinalMessage(HWND /*hWnd*/)
@@ -25,7 +25,7 @@ public:
 	};
 
 	void Init() {
-		CEditUI* pNameEdit = static_cast<CEditUI*>(m_pm.FindControl(_T("edit_columns")));
+		CEditUI* pNameEdit = static_cast<CEditUI*>(m_pm.FindControl(_T("edit_name")));
 		if (pNameEdit)
 			pNameEdit->SetFocus();
 	}
@@ -36,36 +36,45 @@ public:
 			if (msg.pSender->GetName() == _T("w_close")) { Close(1); return; }
 			else if (msg.pSender->GetName() == _T("btn_ok")) 
 			{
-				m_pRes->push_back(FIRSTNAME_HEADER_NAME);
-				m_pRes->push_back(LASTNAME_HEADER_NAME);
-				m_pRes->push_back(ADDRESS1_HEADER_NAME);
-				m_pRes->push_back(ADDRESS2_HEADER_NAME);
-				m_pRes->push_back(CITY_HEADER_NAME);
-				m_pRes->push_back(STATE_HEADER_NAME);
-				m_pRes->push_back(ZIPCODE_HEADER_NAME);
-				m_pRes->push_back(PHONE_HEADER_NAME);
-
-				CEditUI *columns = static_cast<CEditUI *>(m_pm.FindControl("edit_columns"));
-				string buff = columns->GetText();
-				replace(buff.begin(), buff.end(), ' ', ',');
-				stringstream ss(buff);
-				string res;
-				while (getline(ss, res, ','))
+				if (m_pRes != NULL)
 				{
-					if (res == "")
-						continue;
+					m_pRes->push_back(CITY_HEADER_NAME);
+					m_pRes->push_back(STATE_HEADER_NAME);
+					m_pRes->push_back(ZIPCODE_HEADER_NAME);
+					m_pRes->push_back(ADDRESS1_HEADER_NAME);
+					m_pRes->push_back(ADDRESS2_HEADER_NAME);
+					m_pRes->push_back(LASTNAME_HEADER_NAME);
+					m_pRes->push_back(FIRSTNAME_HEADER_NAME);
+					m_pRes->push_back(PHONE_HEADER_NAME);
 
-					if (!Util::IsLetterNumberDash(res))
+					CEditUI *columns = static_cast<CEditUI *>(m_pm.FindControl("edit_columns"));
+					string buff = columns->GetText();
+					replace(buff.begin(), buff.end(), ' ', ',');
+					stringstream ss(buff);
+					string res;
+					while (getline(ss, res, ','))
 					{
-						MessageBox(NULL, "Name contains invalid characters.", "Notify", MB_OK);
-						return;
-					}
+						if (res == "")
+							continue;
 
-					res = Util::ToUpper(res);
-					if (find(m_pRes->begin(), m_pRes->end(), res) == m_pRes->end())
-						m_pRes->push_back(res);
+						if (!Util::IsLetterNumberDash(res))
+						{
+							MessageBox(NULL, "Name contains invalid characters.", "Notify", MB_OK);
+							return;
+						}
+
+						res = Util::ToUpper(res);
+						if (find(m_pRes->begin(), m_pRes->end(), res) == m_pRes->end())
+							m_pRes->push_back(res);
+					}
 				}
 				
+				if (m_pRes2 != NULL)
+				{
+					CEditUI *name = static_cast<CEditUI *>(m_pm.FindControl("edit_name"));
+					(*m_pRes2) = name->GetText();
+				}
+
 				Close(0); 
 				return; 
 			}
@@ -184,4 +193,5 @@ public:
 public:
 	CPaintManagerUI m_pm;
 	vector<string> *m_pRes;
+	string *m_pRes2;
 };

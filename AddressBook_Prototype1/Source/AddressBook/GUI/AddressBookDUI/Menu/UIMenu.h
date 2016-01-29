@@ -71,7 +71,7 @@ class CMenuElementUI;
 class CMenuWnd : public CWindowWnd, public ContextMenuReceiver, public INotifyUI
 {
 public:
-	CMenuWnd(HWND hParent = NULL, CPaintManagerUI *pNoteReceiver = NULL);
+	CMenuWnd(HWND hParent = NULL, CPaintManagerUI *pNoteReceiver = NULL, CControlUI *pMenuCreator = NULL);
     void Init(CMenuElementUI* pOwner, STRINGorID xml, LPCTSTR pSkinType, POINT point);
     LPCTSTR GetWindowClassName() const;
     void OnFinalMessage(HWND hWnd);
@@ -83,6 +83,7 @@ public:
 
 public:
 	CPaintManagerUI *m_pNoteReceiver;
+	CControlUI *m_pMenuCreator;
 	HWND m_hParent;
 	POINT m_BasedPoint;
 	STRINGorID m_xml;

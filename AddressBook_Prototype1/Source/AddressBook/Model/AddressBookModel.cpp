@@ -33,6 +33,13 @@ int AddressBookModel::GetAllAddressBookNames(vector<string> *out)
 	return db.GetAllTableNames(out);
 }
 
+int AddressBookModel::DeleteAddressbook(string name)
+{
+	Database db(DATA_FILE_NAME);
+
+	return db.DeleteTable(name);
+}
+
 int AddressBookModel::Open(const string addresBookName)
 {
 	Database db(DATA_FILE_NAME);
@@ -112,6 +119,17 @@ int AddressBookModel::UpdateContact(const int index, const map<string, string> c
 		if(contactInfo.find(j) != contactInfo.end())
 			m_ContactInfoList[index][j] = contactInfo.at(j);
 		
+	m_Changed = true;
+	return 0;
+}
+
+int AddressBookModel::DeleteContact(const int index)
+{
+	if ((int)m_ContactInfoList.size() <= index)
+		return 1;
+
+	m_ContactInfoList.erase(m_ContactInfoList.begin() + index);
+
 	m_Changed = true;
 	return 0;
 }
@@ -223,9 +241,9 @@ void AddressBookModel::SetHeaders(vector<string> headers)
 	m_Headers = headers;
 }
 
-void AddressBookModel::GetHeaders(vector<string> headers)
+vector<string> AddressBookModel::GetHeaders()
 {
-	headers = m_Headers;
+	return m_Headers;
 }
 
 void AddressBookModel::AddHeader(string newHeader)

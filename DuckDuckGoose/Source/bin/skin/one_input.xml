@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window size="320,170" sizebox="4,4,8,8" caption="0,0,0,30" roundcorner="5, 5" title="123" mininfo="300,300">
+	<Font id="0" name="Arial" size="13" />
+	<Default shared="true" name="Button" value="normalimage=&quot;file='button.png' source='0,0,63,23'&quot; hotimage=&quot;file='button.png' source='0,23,63,46'&quot; pushedimage=&quot;file='button.png' source='0,23,63,46'&quot;" />
+	<Default name="Edit" value="bordercolor=&quot;#C6CFD8&quot;  textcolor=&quot;#FF4422AA&quot; bkimage=&quot;file='search_bg.png' source='0,0,258,23' corner='1,1,1,1'&quot; focusbordercolor=&quot;#CC7878&quot; bordersize=&quot;1&quot; borderround=&quot;2,2&quot;" />
+	<VerticalLayout bkimage="file='bg.png' corner='10,100,10,10' hole='false'" bkcolor="#FF313C00" inset="3,0,3,0">
+		<HorizontalLayout height="25" padding="0,0,3,20">	<!--Title-->
+			<HorizontalLayout inset="3,4,0,0">	<!--Title Bar -->
+				<Label name="label_title" height="22" font="0" textcolor="#FFFFFFFF" />
+			</HorizontalLayout>
+			<HorizontalLayout width="28" inset="0,2,2,0">	<!--Title Buttons -->
+				<Button name="w_close" maxwidth="28" maxheight="17" normalimage="file='max_min.png' source='28,0,56,17'" hotimage="file='max_min_h.png' source='28,0,56,17'" pushedimage="file='max_min_h.png' source='28,0,56,17'"/>
+			</HorizontalLayout>
+		</HorizontalLayout>
+		<VerticalLayout height="75" padding="10,0,10,10">
+			<Text name="label_msg"  font="0"/>
+			<Edit name="edit_input" padding="0,5,0,0"/>
+		</VerticalLayout>
+		<HorizontalLayout>
+			<Container />
+			<Button name="btn_ok" text="OK" height="25" width="50" />
+			<Container width="10" />
+		</HorizontalLayout>
+	</VerticalLayout>
+</Window>

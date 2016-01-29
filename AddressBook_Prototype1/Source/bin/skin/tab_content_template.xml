@@ -23,6 +23,8 @@
 					<Label text="Address:" font="2"/>
 					<Text name="contact_detail_address_detail" font="1" padding="10,0,0,0"/>
 				</VerticalLayout>
+				<VerticalLayout name="contact_detail_custom">
+				</VerticalLayout>
 			</VerticalLayout>
 		 </VerticalLayout>
 	</VerticalLayout>

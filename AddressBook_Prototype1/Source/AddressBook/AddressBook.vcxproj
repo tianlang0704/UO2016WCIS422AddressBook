@@ -24,6 +24,7 @@
     <ClInclude Include="GUI\AddressBookDUI\AddressBookWindow.h" />
     <ClInclude Include="GUI\AddressBookDUI\CustomColumnsWindow.h" />
     <ClInclude Include="GUI\AddressBookDUI\EditWindow.h" />
+    <ClInclude Include="GUI\AddressBookDUI\HelpWindow.h" />
     <ClInclude Include="GUI\AddressBookDUI\Menu\observer_impl_base.hpp" />
     <ClInclude Include="GUI\AddressBookDUI\Menu\StdAfx.h" />
     <ClInclude Include="GUI\AddressBookDUI\Menu\UICrack.h" />
@@ -46,6 +47,9 @@
     <ProjectReference Include="GUI\DuiLib\DuiLib.vcxproj">
       <Project>{e106acd7-4e53-4aee-942b-d0dd426db34e}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="icon1.ico" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{18B559D5-6E3A-4911-B04B-890CC99B68F4}</ProjectGuid>

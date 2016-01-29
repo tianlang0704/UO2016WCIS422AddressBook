@@ -2,7 +2,7 @@
 <Window>
   <Font id="0" name="Arial" size="12" bold="false" default="true" />
   
-  <Menu inset="2,2,2,2" itemtextpadding="130,0,0,0" bkimage="file='menu_bk.png' corner='30,8,8,8'" hole="false">
+  <Menu inset="2,2,2,2" itemtextpadding="170,0,0,0" bkimage="file='menu_bk.png' corner='30,8,8,8'" hole="false">
 	<MenuElement name="menu_btn_open" height="22" inset="30,0,0,0">
 		<HorizontalLayout>
 			<Label text="Open" />
@@ -11,6 +11,11 @@
 	<MenuElement name="menu_btn_save" height="22" inset="30,0,0,0">
 		<HorizontalLayout>
 			<Label text="Save" />
+		</HorizontalLayout>
+	</MenuElement>
+		<MenuElement name="menu_btn_save_as" height="22" inset="30,0,0,0">
+		<HorizontalLayout>
+			<Label text="Save As" />
 		</HorizontalLayout>
 	</MenuElement>
 	<MenuElement name="menu_btn_close" height="22" inset="30,0,0,0">
@@ -31,7 +36,13 @@
 	<MenuElement name="menu_btn_new" height="25" inset="30,0,0,0">
 		<VerticalLayout>
 			<Container height="1" padding="0,2,0,0" bkcolor="#FFDDDDDD" />
-			<Label text="New Address Book" />
+			<Label text="New address book" />
+		</VerticalLayout>
+	</MenuElement>
+	<MenuElement name="menu_btn_delete" height="25" inset="30,0,0,0">
+		<VerticalLayout>
+			<Container height="1" padding="0,2,0,0" bkcolor="#FFDDDDDD" />
+			<Label text="Delete address book" />
 		</VerticalLayout>
 	</MenuElement>
 	<MenuElement name="menu_btn_exit" height="25" inset="30,0,0,0">

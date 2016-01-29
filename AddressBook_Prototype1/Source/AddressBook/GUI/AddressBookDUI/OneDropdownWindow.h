@@ -9,7 +9,10 @@ using namespace DuiLib;
 class OneDropdownWindow : public CWindowWnd, public INotifyUI, public IMessageFilterUI
 {
 public:
-	OneDropdownWindow(string *res, string msg, string title, vector<string> options) { m_pRes = res; m_Msg = msg; m_Title = title; m_Options = options; };
+	OneDropdownWindow(string *res, string msg, string title, vector<string> options, bool conf = false, string confMsg = "") 
+	{
+		m_pRes = res; m_Msg = msg; m_Title = title; m_Options = options; m_Conf = conf; m_ConfMsg = confMsg;
+	};
 	LPCTSTR GetWindowClassName() const { return _T("UIPopupFrame"); };
 	UINT GetClassStyle() const { return UI_CLASSSTYLE_DIALOG; };
 	void OnFinalMessage(HWND /*hWnd*/)
@@ -52,9 +55,18 @@ public:
 			if (msg.pSender->GetName() == _T("w_close")) { Close(1); return; }
 			else if (msg.pSender->GetName() == _T("btn_ok")) 
 			{
-				CComboUI* pCombo = static_cast<CComboUI*>(m_pm.FindControl(_T("combo_select")));
 
-				(*m_pRes) = pCombo->GetText();
+				CComboUI* pCombo = static_cast<CComboUI*>(m_pm.FindControl(_T("combo_select")));
+				string adName = pCombo->GetText();
+
+				if (m_Conf)
+				{
+					string msg = "Do you really want to choose address book \"" + adName + "\"?\n" + m_ConfMsg;
+					if (MessageBox(m_pm.GetPaintWindow(), msg.c_str(), "Confirmation", MB_OKCANCEL) == IDCANCEL)
+						return;
+				}
+
+				(*m_pRes) = adName;
 				Close(0); 
 				return; 
 			}
@@ -177,4 +189,6 @@ public:
 	string *m_pRes;
 	string m_Msg, m_Title;
 	vector<string> m_Options;
+	bool m_Conf;
+	string m_ConfMsg;
 };

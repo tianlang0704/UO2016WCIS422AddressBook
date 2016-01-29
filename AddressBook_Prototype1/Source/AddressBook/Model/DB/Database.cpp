@@ -34,7 +34,11 @@ int Database::GetColumnNames(const string tableName, vector<string> *out) const
 		return res;
 
 	for (auto &i : output)
-		out->push_back(i.at("name"));
+	{
+		string name = i.at("name");
+		if (name != "ID")
+			out->push_back(name);
+	}
 
 	return res;
 }
@@ -45,7 +49,7 @@ int Database::GetAllRecords(const string tableName, vector< map<string, string> 
 		return 2;
 
 	string order = " ORDER BY " + sortField + (bAsc ? " ASC;" : " DSC;");
-	string sql = "SELECT * FROM " + Util::ToUpper(tableName) + order + ";";
+	string sql = "SELECT * FROM " + tableName + order + ";";
 	
 	return Exec(sql, out);
 }
@@ -61,14 +65,14 @@ int Database::SearchStringInFields(
 	string sql = "";
 	if (searchStr == "")
 	{
-		sql = "SELECT * FROM " + Util::ToUpper(tableName) + ";";
+		sql = "SELECT * FROM " + tableName + ";";
 	}
 	else
 	{ 
 		if (!Util::IsLetterNumberDash(tableName) || !Util::IsLetterNumberDash(sortField))
 			return 2;
 
-		sql = "SELECT * FROM " + Util::ToUpper(tableName) + " WHERE ";
+		sql = "SELECT * FROM " + tableName + " WHERE ";
 		string order = " ORDER BY " + sortField + (bAsc ? " ASC;" : " DSC;");
 
 		auto it = fieldNames.cbegin();
@@ -97,7 +101,7 @@ int Database::GetRecordByFields(const string tableName, map<string, string> fiel
 		return 2;
 
 	string order = " ORDER BY " + sortField + (bAsc ? " ASC;" : " DSC;");
-	string sql = "SELECT * FROM " + Util::ToUpper(tableName) + " WHERE ";
+	string sql = "SELECT * FROM " + tableName + " WHERE ";
 
 	auto it = fieldValues.cbegin();
 	while (it != fieldValues.cend())
@@ -127,7 +131,7 @@ int  Database::GetRecordByID(const string tableName, const int id, map<string, s
 	int res;
 
 	string order = " ORDER BY " + sortField + (bAsc ? " ASC;" : " DSC;");
-	string sql = "SELECT * FROM " + Util::ToUpper(tableName) + " WHERE  ID=" + to_string(id) + order + ";";
+	string sql = "SELECT * FROM " + tableName + " WHERE  ID=" + to_string(id) + order + ";";
 
 	res = Exec(sql, &entryList);
 
@@ -150,7 +154,7 @@ int Database::UpdateRecordByID(const string tableName, const int id, const pair<
 	if (!Util::IsLetterNumberDash(tableName) || !Util::IsLetterNumberDash(field.first))
 		return 2;
 
-	string sql = "UPDATE " + Util::ToUpper(tableName) + " SET " + Util::ToUpper(field.first) + "='" + field.second + "' WHERE  ID=" + to_string(id) + ";";
+	string sql = "UPDATE " + tableName + " SET " + Util::ToUpper(field.first) + "='" + field.second + "' WHERE  ID=" + to_string(id) + ";";
 
 	return Exec(sql);
 }
@@ -161,7 +165,7 @@ int Database::DeleteRecordByID(const string tableName, const int id)
 	if (!Util::IsLetterNumberDash(tableName))
 		return 2;
 
-	string sql = "DELETE FROM " + Util::ToUpper(tableName) + " WHERE  ID=" + to_string(id) + ";";
+	string sql = "DELETE FROM " + tableName + " WHERE  ID=" + to_string(id) + ";";
 
 	return Exec(sql);
 
@@ -172,7 +176,7 @@ int Database::AddField(const string tableName, const string fieldName)
 	if (!Util::IsLetterNumberDash(tableName) || !Util::IsLetterNumberDash(fieldName))
 		return 2;
 
-	string sql = "ALTER TABLE " + Util::ToUpper(tableName) + " ADD " + Util::ToUpper(fieldName) + " TEXT";
+	string sql = "ALTER TABLE " + tableName + " ADD " + Util::ToUpper(fieldName) + " TEXT";
 
 	return Exec(sql);
 }
@@ -182,7 +186,7 @@ int Database::AddRecord(const string tableName, const map<string, string> newEnt
 	if (!Util::IsLetterNumberDash(tableName))
 		return 2;
 
-	string sql = "INSERT INTO " + Util::ToUpper(tableName) + " (";
+	string sql = "INSERT INTO " + tableName + " (";
 	
 	auto it = newEntry.cbegin();
 	while(it != newEntry.cend())
@@ -191,7 +195,10 @@ int Database::AddRecord(const string tableName, const map<string, string> newEnt
 			return 2;
 
 		if (Util::ToUpper((*it).first).compare("ID") == 0)
+		{
+			++it;
 			continue;
+		}
 
 		sql.append(Util::ToUpper((*it).first));
 
@@ -221,7 +228,7 @@ int Database::AddRecord(const string tableName, const map<string, string> newEnt
 
 int Database::AddTable(const string tableName)
 {
-	return AddTable(Util::ToUpper(tableName), vector<string>());
+	return AddTable(tableName, vector<string>());
 }
 
 int Database::AddTable(const string tableName, const vector<string> defaultCals)
@@ -232,10 +239,10 @@ int Database::AddTable(const string tableName, const vector<string> defaultCals)
 	string sql;
 
 	if (defaultCals.empty())
-		sql = "CREATE TABLE IF NOT EXISTS " + Util::ToUpper(tableName) + "(ID INTEGER PRIMARY KEY AUTOINCREMENT);";
+		sql = "CREATE TABLE IF NOT EXISTS " + tableName + "(ID INTEGER PRIMARY KEY AUTOINCREMENT);";
 	else
 	{
-		sql = "CREATE TABLE IF NOT EXISTS " + Util::ToUpper(tableName) + "(ID INTEGER PRIMARY KEY AUTOINCREMENT";
+		sql = "CREATE TABLE IF NOT EXISTS " + tableName + "(ID INTEGER PRIMARY KEY AUTOINCREMENT";
 		for (auto& i : defaultCals)
 		{
 			if (!Util::IsLetterNumberDash(i))
@@ -253,7 +260,7 @@ int Database::DeleteTable(const string tableName)
 	if (!Util::IsLetterNumberDash(tableName))
 		return 2;
 
-	string sql = "DROP TABLE IF EXISTS " + Util::ToUpper(tableName);
+	string sql = "DROP TABLE IF EXISTS " + tableName;
 
 	return Exec(sql);
 }
@@ -263,7 +270,7 @@ bool Database::IsTableExist(const string tableName) const
 	if (!Util::IsLetterNumberDash(tableName))
 		return false;
 
-	string sql = "SELECT count(*) FROM sqlite_master WHERE type='table' AND name='" + Util::ToUpper(tableName) + "';";
+	string sql = "SELECT count(*) FROM sqlite_master WHERE type='table' AND name='" + tableName + "';";
 
 	vector< map<string, string> > entryList;
 	Exec(sql, &entryList);
@@ -334,7 +341,7 @@ int Database::PrintTable(string tableName)
 		return 2;
 
 	vector<map <string, string> > entryList;
-	if (!GetAllRecords(Util::ToUpper(tableName), &entryList))
+	if (!GetAllRecords(tableName, &entryList))
 	{
 		for (auto& i : entryList)
 		{

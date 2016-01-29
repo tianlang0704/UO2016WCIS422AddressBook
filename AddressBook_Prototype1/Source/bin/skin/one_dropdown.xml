@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Window size="320,170" sizebox="4,4,8,8" caption="0,0,0,30" roundcorner="5, 5" title="123" mininfo="300,300">
 	<Font id="0" name="Arial" size="13" />
-	<Default shared="true" name="Button" value="normalimage=&quot;file='button.png' source='0,0,63,23'&quot; hotimage=&quot;file='button.png' source='0,23,63,46'&quot; pushedimage=&quot;file='button.png' source='0,23,63,46'&quot;" />
+	<Default shared="true" name="Button" value="normalimage=&quot;file='button.png' source='0,0,63,23'&quot; hotimage=&quot;file='button.png' source='0,23,63,46'&quot; pushedimage=&quot;file='button.png' source='0,46,63,69'&quot;" />
 	<VerticalLayout bkimage="file='bg.png' corner='10,100,10,10' hole='false'" bkcolor="#FF313C00" inset="3,0,3,0">
 		<HorizontalLayout height="25" padding="0,0,3,20">	<!--Title-->
 			<HorizontalLayout inset="3,4,0,0">	<!--Title Bar -->

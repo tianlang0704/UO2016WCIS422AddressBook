@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template>
+<HorizontalLayout name="tab_content_template" inset="3,0,3,0">  <!-- Tab body -->
+	<VerticalLayout width="200" bkcolor="#FFFFFFFF"> <!--Name List-->
+		<List name="contact_list"   inset="0,0,0,0" itemshowhtml="true" vscrollbar="true" hscrollbar="true" itemalign="center" itembkcolor="#FFE2DDDF" itemaltbk="true" menu="true" header="hidden">
+		</List>
+	</VerticalLayout>
+	<Container width="1" bkcolor="#FFCECEDF"/>
+	<VerticalLayout> <!--Detailed Area-->
+		 <VerticalLayout padding="12,12,12,0" inset="10,10,10,10" bkcolor="#FFFFFFFF" borderround="10,10" bordersize="1" bordercolor="#FFDDDDDD" focusbordercolor="#FF883344">
+			<VerticalLayout name="contact_detail">
+				<HorizontalLayout height="100">
+					<Control name="contact_detail_pic" width="100" height="100" bkimage="file='photo_place_holder.png'" bordercolor="#FFEEEEEE" bordersize="1"/>
+					<Container width="10" />
+					<VerticalLayout>
+						<Label name="contact_detail_name" text="" font="3"/> 
+						<Text name="contact_detail_address" text="" font="2"/>
+					</VerticalLayout>
+				</HorizontalLayout>
+				<VerticalLayout name="contact_detail_extra">
+					<Label text="Phone:" font="2"/>
+					<Label name="contact_detail_phone" font="1" padding="10,0,0,0"/>
+					<Label text="Address:" font="2"/>
+					<Text name="contact_detail_address_detail" font="1" padding="10,0,0,0"/>
+				</VerticalLayout>
+				<VerticalLayout name="contact_detail_custom">
+				</VerticalLayout>
+			</VerticalLayout>
+		 </VerticalLayout>
+	</VerticalLayout>
+</HorizontalLayout>
+</template>

@@ -98,6 +98,9 @@
     <ClInclude Include="GUI\AddressBookDUI\OneDropdownWindow.h">
       <Filter>GUI</Filter>
     </ClInclude>
+    <ClInclude Include="GUI\AddressBookDUI\HelpWindow.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="AddressBook.rc">
@@ -106,5 +109,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="..\bin\skin.zip" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="icon1.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

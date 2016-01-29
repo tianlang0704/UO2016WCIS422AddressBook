@@ -2,17 +2,39 @@ AddressBook_Prototype1
 
 *Almost no input check
 
+In progress:
+fix: Black out un-usable menu options (Andrew)
 
 Updates
+2016-01-28
+*Added: Help page
+*Added: Deletion/Edit menu (Micah)
+*Added: Tab menu 
+*Added: List menu 
+*Added: File > Delete Address Book(Andrew)
+*Added: File > Save As(Andrew)
+*fixed: Import address book name defaults to untitled
+*fixed: Import/export order changed to the standard field order
+*fixed: Import/export window and button names changed to the right names of save and open (Trace)
+*fixed: Sorting tie breaking by first name
+*fixed: Open tab name dup check
+*fixed: Edit window Input area style improvement
+*fixed: Open window empty name check
+*fixed: Check unsave before close
+*fixed: fix ignoring unsave prompt when closing a single tab
+*fixed: Clear detailed info when there is no contact in the list
+*fixed: Table name upper case problem(Micah)
+*fixed: Minimize does not work (Andrew)
+*fixed: Press enter to apply edit changes
+*fixed: Input name when creating address book(Andrew/Micah)
+*fixed: Change to save without comfirmation
+*fixed: Reading ID from database causes unable to save
+
 2016-01-27(L2)
 Added: Import/Export
 Added: Search
 Added: Unsave prompt
 fixed: Little bugs here and there
-
-Known bugs: 
-saving is still a little bit buggy
-
 
 2016-01-26(L1)
 Modified: Press enter to submit input in pop up dialogs

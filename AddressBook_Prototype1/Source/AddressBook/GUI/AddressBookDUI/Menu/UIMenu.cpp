@@ -134,18 +134,22 @@ class CMenuBuilderCallback: public IDialogBuilderCallback
 	}
 };
 
-CMenuWnd::CMenuWnd(HWND hParent, CPaintManagerUI *pNoteReceiver) :
+CMenuWnd::CMenuWnd(HWND hParent, CPaintManagerUI *pNoteReceiver, CControlUI *pMenuCreator) :
 m_hParent(hParent),
 m_pNoteReceiver(pNoteReceiver),
 m_pOwner(NULL),
 m_pLayout(),
-m_xml(_T(""))
+m_xml(_T("")),
+m_pMenuCreator(pMenuCreator)
 {}
 
 void CMenuWnd::Notify(TNotifyUI& msg)
 {
 	if (msg.sType == DUI_MSGTYPE_ITEMCLICK)
+	{
+		msg.wParam = (WPARAM)m_pMenuCreator;
 		m_pNoteReceiver->SendNotify(msg, true);
+	}
 }
 
 BOOL CMenuWnd::Receive(ContextMenuParam param)

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template>
+	<Option name="addressbook_tab" maxwidth="80" endellipsis="true" normalimage="tabbar_normal.png" hotimage="tabbar_hover.png" pushedimage="tabbar_pushed.png" selectedimage="tabbar_pushed.png" group="contenttab" menu="true" />
+</template>

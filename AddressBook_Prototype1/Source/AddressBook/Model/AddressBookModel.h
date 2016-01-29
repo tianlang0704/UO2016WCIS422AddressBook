@@ -30,6 +30,7 @@ public:
 	~AddressBookModel();
 
 	static int GetAllAddressBookNames(vector<string> *out);
+	static int DeleteAddressbook(string name);
 
 	int Open(const string addresBookName);
 	int Search(const string str);
@@ -37,6 +38,7 @@ public:
 
 	void AddNewContact(const map<string, string> contactInfo);
 	int UpdateContact(const int index, const map<string, string> contactInfo);
+	int DeleteContact(const int index);
 
 	int GetAllContacts(vector< map<string, string> > *out) const;
 	int GetContact(const int index, map<string, string> *out);
@@ -47,7 +49,7 @@ public:
 	int Export(const string fileName) const;
 
 	void SetHeaders(vector<string> headers);
-	void GetHeaders(vector<string> headers);
+	vector<string> GetHeaders();
 	void AddHeader(string newHeader);
 	string GetName() const;
 	void SetName(string name);
@@ -68,7 +70,31 @@ class ABSort
 {
 public:
 	ABSort(string fieldName, bool bASC = true){ m_FieldName = fieldName; m_bASC = bASC; };
-	bool operator() (const map<string, string> &a, const map<string, string> &b){ return (m_bASC) ? (a.at(m_FieldName) < b.at(m_FieldName)) : (a.at(m_FieldName) > b.at(m_FieldName)); };
+	bool operator() (const map<string, string> &a, const map<string, string> &b){ 
+		bool res = false;
+		if (m_bASC){
+			if (a.at(m_FieldName) != b.at(m_FieldName)){
+				res = a.at(m_FieldName) < b.at(m_FieldName);
+			}else{
+				bool aFirstnameExist = a.find(FIRSTNAME_HEADER_NAME) != a.end();
+				bool bFirstnameExist = b.find(FIRSTNAME_HEADER_NAME) != b.end();
+				if (aFirstnameExist && bFirstnameExist){
+					res = a.at(FIRSTNAME_HEADER_NAME) < b.at(FIRSTNAME_HEADER_NAME);
+				}
+			}
+		}else{
+			if (a.at(m_FieldName) != b.at(m_FieldName)){
+				res = a.at(m_FieldName) > b.at(m_FieldName);
+			}else{
+				bool aFirstnameExist = a.find(FIRSTNAME_HEADER_NAME) != a.end();
+				bool bFirstnameExist = b.find(FIRSTNAME_HEADER_NAME) != b.end();
+				if (aFirstnameExist && bFirstnameExist){
+					res = a.at(FIRSTNAME_HEADER_NAME) < b.at(FIRSTNAME_HEADER_NAME);
+				}
+			}
+		}
+		return res; 
+	};
 
 private:
 	string m_FieldName;

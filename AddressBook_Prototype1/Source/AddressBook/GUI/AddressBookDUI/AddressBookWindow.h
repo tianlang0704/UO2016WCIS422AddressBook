@@ -55,27 +55,34 @@ private:
 
 private:
 	void Prepare();
-	void OpenMenu(CDuiPoint p, STRINGorID fileName);
-	int OpenFileDialog(string *out, DWORD flagAdd = 0, DWORD flagRemove = 0);
+	void ShowMenu(CDuiPoint p, STRINGorID fileName, CControlUI *pSender);
+	int ShowOpenFileDialog(string *out, DWORD flagAdd = 0, DWORD flagRemove = 0);
+	int ShowSaveFileDialog(string *out, DWORD flagAdd = 0, DWORD flagRemove = 0);
 
 	void AddTab(AddressBookModel *ad = NULL);
-	void RemoveTab();
+	void RemoveTab(int index);
 	void AddContact();
 	void ShowDetail(int index);
 	void Edit(int index);
 	void UpdateContactList();
 	void Open();
 	void Save();
+	void SaveAs();
 	void Exit();
 	void Export();
 	void Import();
 	void Sort(string header);
 	void Search(string searchStr);
-	bool CheckUnsave();
+	void DeleteContact(int index);
+	void DeleteAddressbook();
+	void Help();
+	bool IsUnsave(int index);
+	bool IsTabDup(string tabName, int *out = NULL);
 
 	void OnTabSelect(TNotifyUI &msg);
 	void OnContactListSelect(TNotifyUI &msg);
 	void OnContactListActivate(TNotifyUI &msg);
+	
 
 private:
 	//=======Templates========

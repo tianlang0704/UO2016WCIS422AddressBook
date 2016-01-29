@@ -10,7 +10,7 @@ using namespace DuiLib;
 class EditWindow : public CWindowWnd, public INotifyUI, public IMessageFilterUI
 {
 public:
-	EditWindow(map<string, string> *res) { m_pRes = res; };
+	EditWindow(map<string, string> *res, vector<string> headers) { m_pRes = res; m_headers = headers; m_nCustom = 0; };
 	LPCTSTR GetWindowClassName() const { return _T("UIPopupFrame"); };
 	UINT GetClassStyle() const { return UI_CLASSSTYLE_DIALOG; };
 	void OnFinalMessage(HWND /*hWnd*/)
@@ -56,6 +56,45 @@ public:
 			m_pState->SetText((*m_pRes)[STATE_HEADER_NAME].c_str());
 		if (m_pZip)
 			m_pZip->SetText((*m_pRes)[ZIPCODE_HEADER_NAME].c_str());
+
+		int fieldNum = m_headers.size();
+		CVerticalLayoutUI *cusCon = static_cast<CVerticalLayoutUI *>(m_pm.FindControl("custom_field_container"));
+		cusCon->SetFixedHeight((fieldNum - 8) * 45);
+		for (int i = 8; i < fieldNum; i++)
+		{
+			string fieldName = m_headers[i];
+
+			CHorizontalLayoutUI *container = new CHorizontalLayoutUI();
+			container->SetAttribute("padding", "5,0,0,15");
+			container->SetAttribute("height", "30");
+			container->SetAttribute("childpadding", "10,0,10,0");
+			container->SetManager(&m_pm, cusCon);
+
+			CLabelUI *label = new CLabelUI();
+			label->SetAttribute("height", "25");
+			label->SetAttribute("width", "50");
+			label->SetAttribute("text", fieldName.c_str());
+			label->SetManager(&m_pm, cusCon);
+
+			CEditUI *edit = new CEditUI();
+			edit->SetAttribute("height", "25");
+			edit->SetAttribute("bordercolor", "#C6CFD8");
+			edit->SetAttribute("textcolor", "#FF4422A");
+			edit->SetAttribute("bkimage", "file='search_bg.png' source='0,0,258,23' corner='1,1,1,1'");
+			edit->SetAttribute("focusbordercolor", "#CC7878");
+			edit->SetAttribute("borderround", "2,2");
+			edit->SetAttribute("bordersize", "1");
+			edit->SetAttribute("name", fieldName.c_str());
+			edit->SetAttribute("text",m_pRes->at(fieldName).c_str());
+			edit->SetManager(&m_pm, cusCon);
+			
+			container->Add(label);
+			container->Add(edit);
+			cusCon->Add(container);
+		}
+
+
+
 	}
 
 	void Notify(TNotifyUI& msg)
@@ -65,25 +104,33 @@ public:
 			else if (msg.pSender->GetName() == _T("btn_cancel")) { Close(1); return; }
 			else if (msg.pSender->GetName() == _T("btn_ok")) 
 			{
-				if (m_pFirstname)
-					(*m_pRes)[FIRSTNAME_HEADER_NAME] = m_pFirstname->GetText().GetData();
-				//if (m_pMiddlename)
-					//(*m_pRes)[MIDDLENAME_HEADER_NAME] = m_pMiddlename->GetText().GetData();
-				if (m_pLastname)
-					(*m_pRes)[LASTNAME_HEADER_NAME] = m_pLastname->GetText().GetData();
-				if (m_pPhone)
-					(*m_pRes)[PHONE_HEADER_NAME] = m_pPhone->GetText().GetData();
-				if (m_pAddress1)
-					(*m_pRes)[ADDRESS1_HEADER_NAME] = m_pAddress1->GetText().GetData();
-				if (m_pAddress2)
-					(*m_pRes)[ADDRESS2_HEADER_NAME] = m_pAddress2->GetText().GetData();
 				if (m_pCity)
 					(*m_pRes)[CITY_HEADER_NAME] = m_pCity->GetText().GetData();
 				if (m_pState)
 					(*m_pRes)[STATE_HEADER_NAME] = m_pState->GetText().GetData();
 				if (m_pZip)
 					(*m_pRes)[ZIPCODE_HEADER_NAME] = m_pZip->GetText().GetData();
-				
+				if (m_pAddress1)
+					(*m_pRes)[ADDRESS1_HEADER_NAME] = m_pAddress1->GetText().GetData();
+				if (m_pAddress2)
+					(*m_pRes)[ADDRESS2_HEADER_NAME] = m_pAddress2->GetText().GetData();
+				if (m_pLastname)
+					(*m_pRes)[LASTNAME_HEADER_NAME] = m_pLastname->GetText().GetData();
+				if (m_pFirstname)
+					(*m_pRes)[FIRSTNAME_HEADER_NAME] = m_pFirstname->GetText().GetData();
+				if (m_pPhone)
+					(*m_pRes)[PHONE_HEADER_NAME] = m_pPhone->GetText().GetData();
+				//if (m_pMiddlename)
+				//(*m_pRes)[MIDDLENAME_HEADER_NAME] = m_pMiddlename->GetText().GetData();
+
+				int fieldNum = m_headers.size();
+				for (int i = 8; i < fieldNum; i++)
+				{
+					CEditUI *cusEdit = static_cast<CEditUI *>(m_pm.FindControl(m_headers[i].c_str()));
+					if (cusEdit)
+						(*m_pRes)[m_headers[i]] = cusEdit->GetText().GetData();
+				}
+
 				Close(0);
 				return;
 			}
@@ -186,6 +233,14 @@ public:
 				Close(1);
 				return true;
 			}
+			else if (wParam == VK_RETURN)
+			{
+				CButtonUI *pOkbtn = static_cast<CButtonUI *>(m_pm.FindControl("btn_ok"));
+				TNotifyUI msg;
+				msg.sType = DUI_MSGTYPE_CLICK;
+				msg.pSender = pOkbtn;
+				m_pm.SendNotify(msg);
+			}
 		}
 		return false;
 	}
@@ -195,6 +250,8 @@ public:
 	
 private:
 	map<string, string> *m_pRes;
+	int m_nCustom;
+	vector<string> m_headers;
 
 	CEditUI *m_pFirstname;
 	CEditUI *m_pMiddlename;

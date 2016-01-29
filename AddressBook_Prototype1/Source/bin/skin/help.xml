@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window size="420,700" sizebox="4,4,8,8" caption="0,0,0,30" roundcorner="5, 5" title="123" mininfo="300,300">
+	<Font id="0" name="Arial" size="14" default="true" />
+	<Font id="1" name="Arial" size="22" bold="true" />
+	<Font id="2" name="Arial" size="30" bold="true" />
+	<Font id="3" name="Arial" size="17" bold="true" />
+	<Font id="4" name="Arial" size="15" bold="true" />
+	<Font id="5" name="Arial" size="19" bold="true" />
+	<Font id="6" name="Arial" size="14" bold="true" />
+	<Default shared="true" name="Button" value="normalimage=&quot;file='button.png' source='0,0,63,23'&quot; hotimage=&quot;file='button.png' source='0,23,63,46'&quot; pushedimage=&quot;file='button.png' source='0,46,63,69'&quot;" />
+	<Default name="Edit" value="bordercolor=&quot;#C6CFD8&quot;  textcolor=&quot;#FF4422AA&quot; bkimage=&quot;file='search_bg.png' source='0,0,258,23' corner='1,1,1,1'&quot; focusbordercolor=&quot;#CC7878&quot; bordersize=&quot;1&quot; borderround=&quot;2,2&quot;" />
+	<VerticalLayout bkimage="file='bg.png' corner='10,100,10,10' hole='false'" bkcolor="#FF313C00" inset="3,0,3,0">
+		<HorizontalLayout height="25" padding="0,0,3,20">	<!--Title-->
+			<HorizontalLayout inset="3,4,0,0">	<!--Title Bar -->
+				<Label height="22" text="Thanks for using Duck Duck Gooose Contact Manager" font="0" textcolor="#FFFFFFFF"/>
+			</HorizontalLayout>
+			<HorizontalLayout width="28" inset="0,2,2,0">	<!--Title Buttons -->
+				<Button name="w_close" maxwidth="28" maxheight="17" normalimage="file='max_min.png' source='28,0,56,17'" hotimage="file='max_min_h.png' source='28,0,56,17'" pushedimage="file='max_min_h.png' source='28,0,56,17'"/>
+			</HorizontalLayout>
+		</HorizontalLayout>
+		<Label align="center" text="Duck Duck Goose Contact Manager" font="1" textcolor="#FF123456"/>
+		<VerticalLayout padding="35,0,0,0" inset="6,0,6,6"> <!--Body-->
+			<Control bkimage="DDG.jpg" height="250" width="333" />
+			<Label text="By:" font="2" textcolor="#FF883366" textcolor="#FF651111"/>
+			<Label text="University of Oregon" font="3" textcolor="#FFAA6767"/>
+			<Label text="CIS 422 Team Duck Duck Goose:" font="4" textcolor="#FFEE6767"/>
+			<VerticalLayout height="120" padding="10,0,0,0">
+				<Label text="Andrew Beach" textcolor="#FF1144EE"/>
+				<Label text="Max Chalmers" textcolor="#FF1144EE"/>
+				<Label text="Trace Hagan" textcolor="#FF1144EE"/>
+				<Label text="Micah Levi" textcolor="#FF1144EE"/>
+				<Label text="Ruyi Zhang" textcolor="#FF1144EE"/>
+			</VerticalLayout>
+			<Label text="Special thanks to:" font="4" textcolor="#FFEE6767"/>
+			<VerticalLayout height="60" padding="10,0,0,0">
+				<Label text="Bitbucket: for hosting our project" textcolor="#FF117744"/>
+				<Label text="Assembla: for hosting our wiki" textcolor="#FF117744"/>
+			</VerticalLayout>
+			<Label text="Special special thanks to:" font="5" textcolor="#FFEE6767"/>
+			<VerticalLayout height="40" padding="10,0,0,0">
+				<Label text="Professor Stuart Faulk: for this opportunity!" textcolor="#FFFF4444" font="6"/>
+			</VerticalLayout>
+		</VerticalLayout>
+	</VerticalLayout>
+</Window>
